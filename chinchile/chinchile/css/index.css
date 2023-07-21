@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*-----------------------------------*\
+ * #PROPIEDADES PERSONALIZADAS
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colores
+     */
+
+     --darkgrey: #1d1d1d; /* letras principales*/
+     --blue: #007aff; /*color de botones principales*/
+     --blue-hover: #1a87ff; /*color hover boton principal*/
+     --orange: #ffab41; /*color de boton secundario, estrellas*/
+     --orange-hover: #ffbc67; /*color hover boton naranja*/
+     --purple: #5a31f4; /*color shop pay*/
+     --purple-hover: #3c0def; /*color hover boton purpura*/
+     --lightgray: #949494; /*letras secundarias*/
+     --black: #0000;
+     --darkpink: #f04f36; /*valores de precios en rebaja*/
+     --darkred: #bf2636; /* stock agotado*/
+     --grey: #808080; 
+     --green: #3c9554; /* en stock*/
+     --color-body: #ffffff; /*body*/
+     --color-bg: #ffffff; /*background*/
+     --white: #ffff;
+
+
+  
+    /**
+     * tipografia
+     */
+  
+    
+    --ff-montserrat: "Montserrat", sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+  
+    --font-size-heading-large: 2.125rem;
+    --font-size-heading-medium: 1.875rem;
+    --font-size-h-1: 1.75rem;
+    --font-size-h-2: 1.625rem;
+    --font-size-h-3: 1.5rem;
+    --font-size-h-4: 1.25rem;
+    --font-size-h-5: 1.125rem;
+    --font-size-h-6: 1.125rem;
+    --font-size-body-larger: 1.375rem;
+    --font-size-body-large: 1.25rem;
+    --font-size-body-medium: 1.125rem;
+    --font-size-body: 1rem;
+    --font-size-body-small: .9375rem;
+    --font-size-body-smaller: .875rem;
+    --font-size-body-smallest: .8125rem;
+    --font-size-body-tiny: .75rem;
+    --font-size-button-small: .875rem;
+    --font-size-button-medium: 1rem;
+    --font-size-button-large: 1.125rem;
+    --font-size-button-x-large: 1.3125rem;
+    --font-size-menu-large: 1.0625rem;
+    --font-size-menu: 1rem;
+    --font-size-input: 1rem;
+    --font-size-section-heading: 1.25rem;
+    --font-size-menu-body-medium: 1.125rem;
+    --font-size-menu-body-small: .9375rem;
+    --font-size-heading-body-small: .9375rem;
+    --font-size-heading-body-smaller: .875rem;
+    --font-size-heading-slideshow: 1.9921875rem;
+  
+    /**
+     * transiciones
+     */
+  
+    --transition1: 0.25s ease-in-out;
+    --transition2: 0.30s;
+    --transition3: 0.35s;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+  
+  
+    /**
+     * border-radius
+     */
+    --radius-0: 0px;
+    --radius-5: 5px;
+    --radius-10: 10px;
+    --radius-15: 15px;
+    --radius-25: 25px;
+  
+  }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li { list-style: none; }
+  
+  a { text-decoration: none; }
+  
+  a,
+  img,
+  span,
+  input,
+  label,
+  button,
+  input,
+  button,
+  svg {
+
+    display: block;
+    background: none;
+    border: none;
+    font: inherit;
+  }
+  
+  button { cursor: pointer; }
+  
+  input { width: 100%; }
+  
+  
+  html {
+    font-family: var(--ff-roboto);
+    scroll-behavior: smooth;
+  }
+  
+  body { background: var(--color-body); }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+   * #REUSED STYLE
+  \*-----------------------------------*/
+
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1 rem;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    margin: 10px;
+    height: 45px;
+    font-weight: bold;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition2);
+  }
+
+  .btn:hover {
+    background-color: var(--blue-hover);
+    
+    border-radius: var(--radius-5);
+  }
+
+    /*-----------------------------------*\
+   * #Boton de buscar
+  \*-----------------------------------*/
+  
+  .search-btn {
+
+    background-color: var(--blue);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    width: 54px;
+    border-radius: 0 var(--radius-5) var(--radius-5) 0;
+}
+
+.search-btn i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: var(--font-size-body-large);
+  transition: var(--transition3);
+  padding: 13px;
+  
+}
+
+.search-btn i:hover {
+  background-color: var(--blue-hover);
+  border-radius: 0 var(--radius-5) var(--radius-5) 0;
+}
+
+  /*-----------------------------------*\
+   * #Boton Principal
+  \*-----------------------------------*/
+  
+
+  .primary-btn {
+    width: 110px;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0 20px;
+    font-weight: bold;
+    border-radius: var(--radius-5);
+  }
+
+
+    /*-----------------------------------*\
+   * #Boton Naranja
+  \*-----------------------------------*/
+
+  .secundary-btn {
+    
+    background-color: #ffab41;
+    border: 1px solid #ffab41;
+    font-size: var(--font-size-button-large);
+    padding: 1rem 1.75rem;
+    letter-spacing: 0em;
+    width: 323px;
+    padding: 1.5rem;
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+    
+  }
+
+  .secundary-btn:hover {
+    background-color: var(--orange-hover);
+  }
+
+      /*-----------------------------------*\
+   * #Boton Purpura
+  \*-----------------------------------*/
+
+  .btn-shop-pay {
+    background: var(--purple) ;
+    border-color: var(--purple) ;
+    width: 548px;
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+    padding: 1rem;
+    font-weight: normal;
+   
+  }
+
+  .btn-shop-pay .shop-pay-logo {
+    color: var(--white);
+    height: 150%;
+    margin-left: 4px;
+    font-size: var(--font-size-button-x-large);
+    
+  }
+
+  .btn-shop-pay:hover {
+    background-color: var(--purple-hover);
+  }
+
+
+        /*-----------------------------------*\
+   * #Botones ocultos
+  \*-----------------------------------*/
+
+  .hidden-btn {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+    padding: 0.8rem;
+    width: 200px;
+    font-size: var(--font-size-body-small);
+    height: 30px;
+  }
+
+
+    /*-----------------------------------*\
+   * #footer
+  \*-----------------------------------*/
+  
+  
+  
