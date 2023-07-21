@@ -5,107 +5,91 @@
 \*-----------------------------------*/
 
 :root {
-
-  /**
+    /** 
      * colores
      */
-
-  --darkgrey: #1d1d1d;
-  /* letras principales*/
-  --blue: #007aff;
-  /*color de botones principales*/
-  --blue-hover: #1a87ff;
-  /*color hover boton principal*/
-  --orange: #ffab41;
-  /*color de boton secundario, estrellas*/
-  --orange-hover: #ffbc67;
-  /*color hover boton naranja*/
-  --purple: #5a31f4;
-  /*color shop pay*/
-  --purple-hover: #3c0def;
-  /*color hover boton purpura*/
-  --lightgray: #949494;
-  /*letras secundarias*/
-  --black: #000000;
-  --darkpink: #f04f36;
-  /*valores de precios en rebaja*/
-  --darkred: #bf2636;
-  /* stock agotado*/
-  --grey: #808080;
-  --green: #3c9554;
-  /* en stock*/
-  --color-body: #ffffff;
-  /*body*/
-  --color-bg: #ffffff;
-  /*background*/
-  --white: #ffff;
-
-
-
-  /**
+    --darkgrey: #1d1d1d;
+    /* letras principales*/
+    --blue: #007aff;
+    /*color de botones principales*/
+    --blue-hover: #1a87ff;
+    /*color hover boton principal*/
+    --orange: #ffab41;
+    /*color de boton secundario, estrellas*/
+    --orange-hover: #ffbc67;
+    /*color hover boton naranja*/
+    --purple: #5a31f4;
+    /*color shop pay*/
+    --purple-hover: #3c0def;
+    /*color hover boton purpura*/
+    --lightgray: #949494;
+    /*letras secundarias*/
+    --black: #000000;
+    --darkpink: #f04f36;
+    /*valores de precios en rebaja*/
+    --darkred: #bf2636;
+    /* stock agotado*/
+    --grey: #808080;
+    --green: #3c9554;
+    /* en stock*/
+    --color-body: #ffffff;
+    /*body*/
+    --color-bg: #ffffff;
+    /*background*/
+    --white: #ffff;
+    /**
      * tipografia
      */
-
-
-  --ff-montserrat: "Montserrat", sans-serif;
-  --ff-roboto: 'Roboto', sans-serif;
-
-  --font-size-heading-large: 2.125rem;
-  --font-size-heading-medium: 1.875rem;
-  --font-size-h-1: 1.75rem;
-  --font-size-h-2: 1.625rem;
-  --font-size-h-3: 1.5rem;
-  --font-size-h-4: 1.25rem;
-  --font-size-h-5: 1.125rem;
-  --font-size-h-6: 1.125rem;
-  --font-size-body-larger: 1.375rem;
-  --font-size-body-large: 1.25rem;
-  --font-size-body-medium: 1.125rem;
-  --font-size-body: 1rem;
-  --font-size-body-smallss: 1.05rem;
-  --font-size-body-smalls: .95rem;
-  --font-size-body-small: .9375rem;
-  --font-size-body-smaller: .875rem;
-  --font-size-body-smallest: .8125rem;
-  --font-size-body-tiny: .75rem;
-  --font-size-button-small: .875rem;
-  --font-size-button-medium: 1rem;
-  --font-size-button-large: 1.125rem;
-  --font-size-button-x-large: 1.3125rem;
-  --font-size-menu-large: 1.0625rem;
-  --font-size-menu: 1rem;
-  --font-size-input: 1rem;
-  --font-size-section-heading: 1.25rem;
-  --font-size-menu-body-medium: 1.125rem;
-  --font-size-menu-body-small: .9375rem;
-  --font-size-heading-body-small: .9375rem;
-  --font-size-heading-body-smaller: .875rem;
-  --font-size-heading-slideshow: 1.9921875rem;
-
-  /**
+    --ff-montserrat: "Montserrat", sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    --font-size-heading-large: 2.125rem;
+    --font-size-heading-medium: 1.875rem;
+    --font-size-h-1: 1.75rem;
+    --font-size-h-2: 1.625rem;
+    --font-size-h-3: 1.5rem;
+    --font-size-h-4: 1.25rem;
+    --font-size-h-5: 1.125rem;
+    --font-size-h-6: 1.125rem;
+    --font-size-body-larger: 1.375rem;
+    --font-size-body-large: 1.25rem;
+    --font-size-body-medium: 1.125rem;
+    --font-size-body: 1rem;
+    --font-size-body-smallss: 1.05rem;
+    --font-size-body-smalls: .95rem;
+    --font-size-body-small: .9375rem;
+    --font-size-body-smaller: .875rem;
+    --font-size-body-smallest: .8125rem;
+    --font-size-body-tiny: .75rem;
+    --font-size-button-small: .875rem;
+    --font-size-button-medium: 1rem;
+    --font-size-button-large: 1.125rem;
+    --font-size-button-x-large: 1.3125rem;
+    --font-size-menu-large: 1.0625rem;
+    --font-size-menu: 1rem;
+    --font-size-input: 1rem;
+    --font-size-section-heading: 1.25rem;
+    --font-size-menu-body-medium: 1.125rem;
+    --font-size-menu-body-small: .9375rem;
+    --font-size-heading-body-small: .9375rem;
+    --font-size-heading-body-smaller: .875rem;
+    --font-size-heading-slideshow: 1.9921875rem;
+    /**
      * transiciones
      */
-
-  --transition1: 0.25s ease-in-out;
-  --transition2: 0.30s;
-  --transition3: 0.35s;
-  --animate-duration: 1s;
-  --animate-delay: 1s;
-  --animate-repeat: 1;
-
-
-  /**
+    --transition1: 0.25s ease-in-out;
+    --transition2: 0.30s;
+    --transition3: 0.35s;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    /**
      * border-radius
      */
-  --radius-0: 0px;
-  --radius-10: 10px;
-  --radius-15: 15px;
-  --radius-25: 25px;
-
+    --radius-0: 0px;
+    --radius-10: 10px;
+    --radius-15: 15px;
+    --radius-25: 25px;
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -115,17 +99,17 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a,
@@ -136,324 +120,262 @@ label,
 button,
 input,
 button {
-  background: none;
-  border: none;
-  font: inherit;
+    background: none;
+    border: none;
+    font: inherit;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 input {
-  width: 100%;
+    width: 100%;
 }
 
-
 html {
-  font-family: var(--ff-roboto);
-  scroll-behavior: smooth;
+    font-family: var(--ff-roboto);
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-body);
+    background: var(--color-body);
 }
+
 
 /*-----------------------------------*\
    * #CABECERA
   \*-----------------------------------*/
+
 .headerS {
-  box-sizing: border-box;
-  width: 100%;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .titleS {
-  background-color: var(--darkgrey);
-  display: flex;
-  justify-content: center;
-  padding: 1% 0;
+    background-color: var(--darkgrey);
+    display: flex;
+    justify-content: center;
+    padding: 1% 0;
 }
 
 .titleS__letra {
-  color: var(--white);
-  font-size: var(--font-size-h-6);
-  font-weight: 400;
+    color: var(--white);
+    font-size: var(--font-size-h-6);
+    font-weight: 400;
 }
 
 .busquedaS {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 3%;
-  padding: 1% 5%;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    padding: 1% 5%;
 }
 
 .busqueda__logoContenedor {
-
-  width: 10%;
+    width: 10%;
 }
 
 .busqueda__logoImg {
-  width: 100%;
+    width: 100%;
 }
 
 .busqueda__contenedor {
-
-  display: flex;
-  align-items: center;
-  width: 50%;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    border: 1px solid blue;
 }
 
 .busqueda__contenedorInput {
-  border: .2px solid rgba(128, 128, 128, 0.388);
-  height: 80%;
-  -webkit-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
-  box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
+    border: .2px solid rgba(128, 128, 128, 0.388);
+    height: 80%;
+    -webkit-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
 }
 
 .busqueda__contenedorInput::placeholder {
-  color: rgba(128, 128, 128, 0.576);
+    color: rgba(128, 128, 128, 0.576);
 }
 
 .busqueda__contenedorButton {
-  background-color: var(--blue);
-  width: 10%;
-  height: 80%;
-  border-radius: 0 5px 5px 0;
-  -webkit-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
-  box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
+    background-color: var(--blue);
+    width: 10%;
+    height: 80%;
+    border-radius: 0 5px 5px 0;
+    -webkit-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 6px 23px -20px rgba(0, 0, 0, 0.75);
 }
 
 .busqueda__contenedorButton:hover {
-  background-color: var(--blue-hover);
-
+    background-color: var(--blue-hover);
 }
 
 .busqueda__contenedorButton svg {
-  color: var(--white);
+    color: var(--white);
 }
 
 .busqueda__puestoEnlace {
-  display: flex;
+    display: flex;
 }
 
 .busqueda__puesto {
-
-  display: flex;
-  align-items: center;
-  gap: 3px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 .buesqueda__puestoContenedorImg {
-  display: flex;
-  justify-content: center;
-
+    display: flex;
+    justify-content: center;
 }
 
 .buesqueda__puestoContenedorImg svg {
-  width: 65%;
-  color: var(--black);
+    width: 65%;
+    color: var(--black);
 }
 
 .buesqueda__puestoContenedortxt {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .contenedorTxtUno {
-  font-size: var(--font-size-body-small);
-  font-weight: 600;
-  color: var(--black);
+    font-size: var(--font-size-body-small);
+    font-weight: 600;
+    color: var(--black);
 }
 
 .contenedorTxtDos {
-  font-size: var(--font-size-body-smaller);
-  font-weight: 300;
-  color: var(--black);
+    font-size: var(--font-size-body-smaller);
+    font-weight: 300;
+    color: var(--black);
 }
 
 .buesqueda__sesion {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 20%;
-
-
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
 }
 
 .buesqueda__sesionEnlaceUno {
-  display: flex;
-  align-items: center;
-  gap: 5%;
-  width: 55%;
-
-
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 55%;
 }
 
 .buesqueda__sesionEnlaceUno svg {
-  width: 16%;
-  color: var(--black);
-
+    width: 16%;
+    color: var(--black);
 }
 
 .buesqueda__sesionEnlaceUno p {
-  color: var(--black);
-  font-size: var(--font-size-body-smaller);
-  font-weight: 600;
+    color: var(--black);
+    font-size: var(--font-size-body-smaller);
+    font-weight: 600;
 }
 
 .buesqueda__sesionEnlaceDos {
-  width: 25%;
-
+    width: 25%;
 }
 
-
 .buesqueda__sesionEnlaceDos svg {
-  width: 100%;
-  color: var(--black);
-
-
+    width: 100%;
+    color: var(--black);
 }
 
 
 /*-----------------------------------*\
    * Menu de Navegacion
   \*-----------------------------------*/
+
 .menuNavegacion {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  background-color: var(--white);
-  padding: 1% 0 1% 7%;
-  gap: 2%;
-}
-.menuNavegacion__enlaceFlexss {
-  width: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--white);
 }
 
+.menuNavegacion__enlaceFlexss {
+    width: 0%;
+}
 
 .menuNavegacion__enlaceFlexListaElemento {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 7rem;
-  gap: 3%;
-
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    gap: 3%;
 }
 
 .menuNavegacion a {
-  color: var(--black);
-  font-weight: 500;
+    color: var(--black);
+    font-weight: 500;
 }
 
 .menuNavegacion a:hover {
-  color: var(--grey);
-  transition: var(--transition3);
+    color: var(--grey);
+    transition: var(--transition3);
 }
 
-
-
 .elementoAparece {
-  box-sizing: border-box;
-  background-color: var(--white);
-  width: 100%;
-  position: absolute;
-  margin-left: -11.3%;
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
- display: none;
- padding: 3% 6% 1% 6%;
+    box-sizing: border-box;
+    background-color: var(--white);
+    width: 17%;
+    position: absolute;
+    margin-left: -9%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    border: 1px solid black;
+}
+
+.contenedor__menuNavegacion {
+    border: 1px solid green;
+    height: 3.4em;
+    display: flex;
+    align-items: center;
 }
 
 .contenedor__menuNavegacion:hover .elementoAparece {
-  display: flex;
-  -webkit-animation: fade-in-top 0.6s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
-	        animation: fade-in-top 0.6s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+    display: flex;
 }
-
-
-
- @-webkit-keyframes fade-in-top {
-  0% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-top {
-  0% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 
 .section__elementoAparece {
-  box-sizing: border-box;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2,1fr);
-  gap: 4% ;
-}
-
-.lista__elementoApareceBottom {
-  margin-bottom: 15%;
-}
-
-.lista__elementoApareceUp {
-  margin-top: 11%;
-}
-
-
-.aaa {
-  margin-bottom: 11%;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .contenedorLista__elementoAparece {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-}
-
-.lista__elementoAparece li a h3 {
-  font-size: var(--font-size-body-smallss);
-
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+    padding: 5%;
 }
 
 .contenedorLista__elementoAparece li a {
-  font-size: var(--font-size-body-smalls);
-  font-weight: 400;
+    font-size: var(--font-size-body-smalls);
+    font-weight: 400;
 }
 
 .lista__elementoAparece {
-  flex-basis: 12%;
-
+    flex-basis: 12%;
 }
 
-
 .lista__elementoAparece li a:hover {
-  color: var(--blue-hover);
+    color: var(--blue-hover);
 }
 
 
@@ -462,72 +384,119 @@ body {
   \*-----------------------------------*/
 
 .bannerPrincipal {
-  background-image: url(../recursos2/ChinChile-Products_9cbda658-28e8-42f7-95e5-a29824245cbb_1583x880.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 75.3vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url(../recursos2/ChinChile-Products_9cbda658-28e8-42f7-95e5-a29824245cbb_1583x880.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 75.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bannerPrincipal__button {
-  background-color: var(--blue);
-  font-size: var(--font-size-button-large);
-  font-weight: 400;
-  padding: .9% 2.2%;
-  border-radius: 3px;
+    background-color: var(--blue);
+    font-size: var(--font-size-button-large);
+    font-weight: 400;
+    padding: .9% 2.2%;
+    border-radius: 3px;
 }
 
 .bannerPrincipal__button a {
-  color: var(--white);
+    color: var(--white);
 }
 
 
 /*-----------------------------------*\
-   * SECCION DE CHINCHILE PRODUCTOS
+   * SECCION CARRUSEL
   \*-----------------------------------*/
 
-  .contenorPadre__chinchileProductos {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 10%;
-  }
 
-  .texto__chinchileProductos {
-    box-sizing: border-box;
-    border: 1px solid black;
+.testimonial-client svg {
+    fill: #ebd10c;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-testimonial {
+    width: 60%;
+}
+
+.testimonial-item {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
-    padding: 4.5% 0 1% 0;
-  }
+}
 
-  .texto__chinchileProductos h1 {
-    font-size: 1.7rem;
-    font-weight: 900;
+.testimonial-client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    gap: 6px;
+}
+
+.testimonial-image {
+    background-image: url(../recursos2/concepto-emociones-personas-foto-cabeza-hombre-atractivo-feliz-riendo-sonriendo-exprese-regocijo_1258-26742.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   width: 20%;
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-image--b {
+    background-image: url(../recursos2/stock-photo-handsome-man-smiling.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   width: 20%;
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-image--c {
+    background-image: url(../recursos2/stock-photo-handsome-man-smiling-camera-isolated.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   width: 20%;
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-text p {
+    font-size: var(--font-size-body-small);
+    font-style: italic;
+    line-height: 1.6em;
     letter-spacing: 1px;
     word-spacing: 2px;
-  }
+    color: rgba(0, 0, 0, 0.661);
+    padding: 0 1.5%;
+}
 
-  .texto__chinchileProductos p {
+.testimonial-name {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
 
-    width: 70%;
-    text-align: center;
-    font-size: var(--font-size-body-smalls);
-    line-height: 1.6em;
-  }
-
-
-
+.testimonial-name h4 {
+    color: #000000a7;
+}
 
 /*-----------------------------------*\
    * #REUSED STYLE
   \*-----------------------------------*/
-
 
 
 /*-----------------------------------*\

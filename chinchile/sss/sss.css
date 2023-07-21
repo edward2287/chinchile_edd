@@ -1,0 +1,89 @@
+.sss {
+	height: 0;
+	margin:3% 0;
+	padding:  0;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	
+}
+
+.ssslide {
+	width: 80%;
+	margin: 0 0 0 10%;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background: #f4f4f4;
+	-webkit-box-shadow: 13px 13px 24px #ededed, -13px -13px 24px #fbfbfb;
+	box-shadow: 13px 13px 24px #ededed, -13px -13px 24px #fbfbfb;
+		-webkit-animation: fade-in-left 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				animation: fade-in-left 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	
+}
+
+
+ @-webkit-keyframes fade-in-left {
+	0% {
+	  -webkit-transform: translateX(-50px);
+			  transform: translateX(-50px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes fade-in-left {
+	0% {
+	  -webkit-transform: translateX(-50px);
+			  transform: translateX(-50px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  
+
+.ssslide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+.sssnext,
+.sssprev {
+	width: 25px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('images/arr.png') no-repeat;
+}
+
+.sssprev {
+	left: 3%;
+	background-position: 0 50%;
+}
+
+.sssnext {
+	right: 3%;
+	background-position: -26px 50%;
+}
+
+.sssprev:hover,
+.sssnext:hover {
+	cursor: pointer;
+}

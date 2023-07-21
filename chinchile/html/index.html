@@ -11,6 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../sss/sss.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="../sss/sss.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(".slider-testimonial").sss()
+        });
+    </script>
 </head>
 
 <body>
@@ -29,14 +37,66 @@
                     src="../recursos2/ChinChile-Products_e4a19f05-c405-434d-ab69-ad07a8ffa66e_414x166.avif" alt="">
             </section>
             <section class="busqueda__contenedor">
-                <input class="busqueda__contenedorInput" type="text" placeholder="¿Que buscas?">
-                <button class="busqueda__contenedorButton"><svg aria-hidden="true" focusable="false" role="presentation"
-                        xmlns="http://www.w3.org/2000/svg" width="23" height="24" fill="none" viewBox="0 0 23 24">
-                        <path d="M21 21L15.5 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                        <circle cx="10" cy="9" r="8" stroke="currentColor" stroke-width="2"></circle>
-                    </svg></button>
+                <nav class="menuNavegacion">
+                    <a href="">Inicio</a>
+                    <ul class="menuNavegacion__enlaceFlexLista">
+                        <li class="contenedor__menuNavegacion">
+                            <a class="menuNavegacion__enlaceFlexss" href="">
+                                <section class="menuNavegacion__enlaceFlexListaElemento">
+                                    <p>Tienda</p>
+                                    <svg aria-hidden="true" focusable="false" role="presentation" width="8" height="6"
+                                        viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon-chevron-down">
+                                        <path class="icon-chevron-down-left" d="M4 4.5L7 1.5" stroke="currentColor"
+                                            stroke-width="1.25" stroke-linecap="square"></path>
+                                        <path class="icon-chevron-down-right" d="M4 4.5L1 1.5" stroke="currentColor"
+                                            stroke-width="1.25" stroke-linecap="square"></path>
+                                    </svg>
+                                </section>
+                            </a>
+                            <ul class="aparecess">
+                                <li class="elementoAparece">
+                                    <section class="section__elementoAparece">
+                                        <ul class="lista__elementoAparece ">
+                                            <section class="contenedorLista__elementoAparece">
+                                                <li>
+                                                    <a href="">
+                                                        Automotive
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Janitorial
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        kitchen
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Laundry
+                                                    </a>
+                                                </li>
+
+                                            </section>
+
+                                        </ul>
+
+                                    </section>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a href="">Acerca de</a>
+                    <a href="">Reseñas</a>
+                    <a href="">Contacte con</a>
+                </nav>
             </section>
-            <section class="busqueda__puesto"> <a class="busqueda__puestoEnlace" href="">
+            <section class="busqueda__puesto">
+                <a class="busqueda__puestoEnlace" href="">
                     <section class="buesqueda__puestoContenedorImg">
                         <svg class="icon-award-trophy " aria-hidden="true" focusable="false" role="presentation"
                             xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
@@ -69,7 +129,6 @@
                         <p class="contenedorTxtDos">Tienda Chilena</p>
                     </section>
                 </a>
-
             </section>
             <section class="buesqueda__sesion">
                 <a class="buesqueda__sesionEnlaceUno" href="">
@@ -96,324 +155,6 @@
         </article>
         <!---Fin de Barra de busqueda-->
 
-        <!--Menu de Navegacion-->
-        <nav class="menuNavegacion">
-            <a href="">Inicio</a>
-
-            <ul class="menuNavegacion__enlaceFlexLista">
-                <li class="contenedor__menuNavegacion">
-                    <a class="menuNavegacion__enlaceFlexss" href="">
-                        <section class="menuNavegacion__enlaceFlexListaElemento">
-                            <p>Tienda</p>
-                            <svg aria-hidden="true" focusable="false" role="presentation" width="8" height="6"
-                                viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                class="icon-chevron-down">
-                                <path class="icon-chevron-down-left" d="M4 4.5L7 1.5" stroke="currentColor"
-                                    stroke-width="1.25" stroke-linecap="square"></path>
-                                <path class="icon-chevron-down-right" d="M4 4.5L1 1.5" stroke="currentColor"
-                                    stroke-width="1.25" stroke-linecap="square"></path>
-                            </svg>
-                        </section>
-                    </a>
-                    <ul class="aparecess">
-                        <li class="elementoAparece">
-                            <section class="section__elementoAparece">
-                                <ul class="lista__elementoAparece lista__elementoApareceBottom ">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Accesorios</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                En torno a la mesa
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Ropa
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Banderas
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Llaveros
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Pegatinas
-                                            </a>
-                                        </li>
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece lista__elementoApareceBottom">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Horneado</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Extractos
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Harinas
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Mezclas
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Azucares
-                                            </a>
-                                        </li>
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece lista__elementoApareceBottom">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Baño y cuerpo</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Fragancias
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Cuidado de la piel
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Jabones y champus
-                                            </a>
-                                        </li>
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece lista__elementoApareceBottom">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Chocolate</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Bolsas
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Bares
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Cajas
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Frutos de cascara y almendras
-                                            </a>
-                                        </li>
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece lista__elementoApareceBottom">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Condimentos</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Condimentos y especias
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Edulcorantes
-                                            </a>
-                                        </li>
-
-
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece lista__elementoApareceBottom">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Bebidas</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Cafe
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Zumos
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Soda
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Te
-                                            </a>
-                                        </li>
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Alimentos</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Cereales
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Frutas y mermeladas
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Cereales y frutos secos
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Marisco
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Sopa y pasta
-                                            </a>
-                                        </li>
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Accesorios</h3>
-                                        </a>
-                                    </li>
-                                    <section class="contenedorLista__elementoAparece">
-                                        <li>
-                                            <a href="">
-                                                Caramelos
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Cookies
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                Aperitivos Salados
-                                            </a>
-                                        </li>
-
-                                    </section>
-
-                                </ul>
-                                <ul class="lista__elementoAparece">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>De Vuelta en Stock</h3>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                                <ul class="lista__elementoAparece">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Canastas</h3>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                                <ul class="lista__elementoAparece">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Novedades</h3>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                                <ul class="lista__elementoAparece">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Ofertas</h3>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                                <ul class="lista__elementoAparece lista__elementoApareceUp">
-                                    <li class="aaa">
-                                        <a href="">
-                                            <h3>Tarjetas de regalo</h3>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                            </section>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-
-            <a href="">Acerca de</a>
-            <a href="">Reseñas</a>
-            <a href="">Contacte con</a>
-        </nav>
-        <!--Fin del menu de Navegacion-->
     </header>
     <!--Fin de la cabecera-->
 
@@ -423,15 +164,173 @@
     </article>
     <!--Termino del Banner Principal-->
 
-    <!--Chinchile Productos-->
-    <article class="contenorPadre__chinchileProductos">
-        <section class="texto__chinchileProductos">
-            <h1>CHINCHILE PRODUCTS</h1>
-            <p>ChinChile Products es su supermercado chileno en línea que ofrece una amplia selección de productos
-                chilenos de alta calidad para los clientes en los EE.UU. y en todo el mundo.</p>
-        </section>
-    </article>
+    <!--Carrusel-->
 
+    <div class="wrapper">
+        <div class="slider-testimonial">
+            <div class="testimonial-item">
+                <div class="testimonial-client">
+                    <section class="testimonial-image">
+
+                    </section>
+                    <section><svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                    </section>
+
+                </div>
+                <div class="testimonial-text">
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere blanditiis libero temporibus qui
+                        at, neque alias soluta optio quaerat ipsum excepturi atque quam animi, id non iure cum odio
+                        debitis?
+                        Debitis rerum velit accusamus, maiores veniam eum, esse enim atque culpa, expedita sunt."</p>
+                </div>
+                <div class="testimonial-name">
+                    <h4>Pedro S</h4>
+                </div>
+            </div>
+            <div class="testimonial-item ">
+                <div class="testimonial-client">
+                    <section class="testimonial-image--b ">
+
+                    </section>
+                    <section><svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                    </section>
+
+                </div>
+                <div class="testimonial-text">
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere blanditiis libero temporibus qui
+                        at, neque alias soluta optio quaerat ipsum excepturi atque quam animi, id non iure cum odio
+                        debitis?
+                        Debitis rerum velit accusamus, maiores veniam eum, esse enim atque culpa, expedita sunt."</p>
+                </div>
+                <div class="testimonial-name">
+                    <h4>Luis S</h4>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-client">
+                    <section class="testimonial-image--c">
+
+                    </section>
+                    <section><svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                        <svg class="icon-star testimonial__star-rating" aria-hidden="true" focusable="false"
+                            role="presentation" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
+                            viewBox="0 0 16 15" fill="none">
+                            <path
+                                d="M7.87297 0.949914C8.07216 0.350029 8.92784 0.350028 9.12703 0.949914L10.7173 5.73911H15.8386C16.4802 5.73911 16.7447 6.55513 16.2232 6.92587L12.0876 9.86607L13.672 14.6376C13.8718 15.2392 13.1794 15.7435 12.6603 15.3744L8.5 12.4167L4.33967 15.3744C3.82058 15.7435 3.12824 15.2392 3.32801 14.6376L4.91239 9.86607L0.776782 6.92587C0.255299 6.55513 0.519768 5.73911 1.16141 5.73911H6.28273L7.87297 0.949914Z">
+                            </path>
+                        </svg>
+                    </section>
+
+                </div>
+                <div class="testimonial-text">
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere blanditiis libero temporibus qui
+                        at, neque alias soluta optio quaerat ipsum excepturi atque quam animi, id non iure cum odio
+                        debitis?
+                        Debitis rerum velit accusamus, maiores veniam eum, esse enim atque culpa, expedita sunt."</p>
+                </div>
+                <div class="testimonial-name">
+                    <h4>Fernando T</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Fin de carrusel-->
 
     <footer>
 
