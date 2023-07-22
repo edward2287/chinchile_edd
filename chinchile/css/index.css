@@ -407,6 +407,306 @@ body {
     color: var(--white);
 }
 
+/*-----------------------------------*\
+   * SECCION ELIAS
+  \*-----------------------------------*/
+
+  /*contenedor descriptivo de los productos */
+.supplies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 480px;
+    gap: 35px;
+    margin: 4% auto;
+    border-radius: 7px;
+    background:linear-gradient(125deg, #e6e6e6, #ffffff);
+    box-shadow:  8px 8px 16px #a8a8a8,
+     -8px -8px 16px #ffffff;  
+}
+/* termino del contenedor descriptivo de los productos */
+
+/*tarjeta de la descripcion de los productos */
+.sup {
+    text-align: center;
+    width: 230px;
+    height: 280px;   
+}
+
+.sup h1 {
+    font-size: 1.35rem;
+}
+
+.imagen img:hover {
+
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
+.texto h1 {
+    color: goldenrod; 
+}
+
+#a a{
+    text-decoration: none;
+    color: rgb(144, 107, 15);
+}
+
+#a:hover {
+    transform: scale(0.95);
+    transition: 0.7s;
+}
+
+#a a:hover {
+    color:  rgb(113, 85, 12);
+    transition: 0.5s;
+}
+/*tarjeta de la descripcion de los productos */
+
+
+/*-----------------------------------*\
+   * SECCION Edward
+  \*-----------------------------------*/
+
+
+/*-----------------------------------*\
+   * #REUSED STYLE
+  \*-----------------------------------*/
+
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1 rem;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 10px;
+    height: 45px;
+    font-weight: bold;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition2);
+}
+
+.btn:hover {
+    background-color: var(--blue-hover);
+    border-radius: var(--radius-5);
+}
+
+
+/*-----------------------------------*\
+   * #Boton de buscar
+  \*-----------------------------------*/
+
+.search-btn {
+    background-color: var(--blue);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    width: 54px;
+    border-radius: 0 var(--radius-5) var(--radius-5) 0;
+}
+
+.search-btn i {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: var(--font-size-body-large);
+    transition: var(--transition3);
+    padding: 13px;
+}
+
+.search-btn i:hover {
+    background-color: var(--blue-hover);
+    border-radius: 0 var(--radius-5) var(--radius-5) 0;
+}
+
+
+/*-----------------------------------*\
+   * #Boton Principal
+  \*-----------------------------------*/
+
+.primary-btn {
+    width: 110px;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0 20px;
+    font-weight: bold;
+    border-radius: var(--radius-5);
+}
+
+
+/*-----------------------------------*\
+   * #Boton Naranja
+  \*-----------------------------------*/
+
+.secundary-btn {
+    background-color: #ffab41;
+    border: 1px solid #ffab41;
+    font-size: var(--font-size-button-large);
+    padding: 1rem 1.75rem;
+    letter-spacing: 0em;
+    width: 323px;
+    padding: 1.5rem;
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+}
+
+.secundary-btn:hover {
+    background-color: var(--orange-hover);
+}
+
+
+/*-----------------------------------*\
+   * #Boton Purpura
+  \*-----------------------------------*/
+
+.btn-shop-pay {
+    background: var(--purple);
+    border-color: var(--purple);
+    width: 548px;
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+    padding: 1rem;
+    font-weight: normal;
+}
+
+.btn-shop-pay .shop-pay-logo {
+    color: var(--white);
+    height: 150%;
+    margin-left: 4px;
+    font-size: var(--font-size-button-x-large);
+}
+
+.btn-shop-pay:hover {
+    background-color: var(--purple-hover);
+}
+
+
+/*-----------------------------------*\
+   * #Botones ocultos
+  \*-----------------------------------*/
+
+.hidden-btn {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+    width: 200px;
+    font-size: var(--font-size-body-small);
+    height: 30px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.hidden-btn:hover {
+    background-color: var(--blue-hover);
+
+}
+
+/*-----------------------------------*\
+   * #tarjetas
+  \*-----------------------------------*/
+
+ /* imagen*/
+
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 25px;
+    margin: 30px 0px 30px 30px;
+  
+    
+    
+  }
+
+  .card-tarjetas {
+    height: 390px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 7px;
+    box-shadow:  8px 8px 16px #dddddd,
+                -8px -8px 16px #ffffff;
+  
+  }
+
+  .card-tarjetas .img-product {
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+ 
+
+  .card-tarjetas .img-product a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+ 
+    transition: var(--transition2);
+  }
+
+  .card-tarjetas .img-product img:hover {
+    transform: scale(1.5);
+  }
+
+  /* titulo*/
+
+.card-tarjetas .title-card {
+ display: flex;
+ justify-content: center;
+ 
+}
+
+.card-tarjetas .title-card a {
+    color: black;
+    transition: var(--transition2);
+}
+
+.card-tarjetas .title-card a:hover {
+    color: var(--blue);
+}
+
+/* sub titulo*/
+
+.card-tarjetas .description-card p:nth-child(1){
+    font-size: var(--font-size-body-smallest);
+    padding: 0 5px 10px 5px;
+}
+
+.card-tarjetas .description-card p:nth-child(2){
+   color: var(--blue);
+    padding: 0 5px 10px 5px;
+}
+
+.card-tarjetas .description-card p:nth-child(3){
+    color: var(--green);
+     padding: 0 5px 0px 5px;
+ }
+
+
+ /* boton*/
+
+ .card-tarjetas .button-hide {
+    display: flex;
+    justify-content: center;
+    
+    
+ }
+
+
+
+
 
 /*-----------------------------------*\
    * SECCION CARRUSEL
