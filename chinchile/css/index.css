@@ -12,7 +12,7 @@
     /* letras principales*/
     --blue: #007aff;
     /*color de botones principales*/
-    --blue-hover: #1a87ff;
+    --blue-hover: #5f9ddf;
     /*color hover boton principal*/
     --orange: #ffab41;
     /*color de boton secundario, estrellas*/
@@ -142,6 +142,180 @@ html {
 body {
     background: var(--color-body);
 }
+
+
+
+/*-----------------------------------*\
+   * #REUSED STYLE
+  \*-----------------------------------*/
+
+  .botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1 rem;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 10px;
+    height: 45px;
+    font-weight: bold;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition2);
+}
+
+.btn:hover {
+    background-color: var(--blue-hover);
+    border-radius: var(--radius-5);
+}
+
+.container {
+
+    margin: 30px 45px;
+}
+
+.container_title {
+    box-sizing: border-box;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 2% 0 0 0;
+  }
+
+  .container_title .title-box {
+    font-size: 2.2em;
+    font-weight: 300;
+    font-family: var(--ff-russo);
+    letter-spacing: 1px;
+  }
+
+  .container_title .paragraph-box {
+    font-size: 1em;
+    color: #000000a6;
+  }
+
+
+/*-----------------------------------*\
+   * #Boton de buscar
+  \*-----------------------------------*/
+
+.search-btn {
+    background-color: var(--blue);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    width: 54px;
+    border-radius: 0 var(--radius-5) var(--radius-5) 0;
+}
+
+.search-btn i {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: var(--font-size-body-large);
+    transition: var(--transition3);
+    padding: 13px;
+}
+
+.search-btn i:hover {
+    background-color: var(--blue-hover);
+    border-radius: 0 var(--radius-5) var(--radius-5) 0;
+}
+
+
+/*-----------------------------------*\
+   * #Boton Principal
+  \*-----------------------------------*/
+
+.primary-btn {
+    width: 110px;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0 20px;
+    font-weight: bold;
+    border-radius: var(--radius-5);
+}
+
+
+/*-----------------------------------*\
+   * #Boton Naranja
+  \*-----------------------------------*/
+
+.secundary-btn {
+    background-color: #ffab41;
+    border: 1px solid #ffab41;
+    font-size: var(--font-size-button-large);
+    padding: 1rem 1.75rem;
+    letter-spacing: 0em;
+    width: 323px;
+    padding: 1.5rem;
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+}
+
+.secundary-btn:hover {
+    background-color: var(--orange-hover);
+}
+
+
+/*-----------------------------------*\
+   * #Boton Purpura
+  \*-----------------------------------*/
+
+.btn-shop-pay {
+    background: var(--purple);
+    border-color: var(--purple);
+    width: 548px;
+    border-radius: var(--radius-5);
+    transition: var(--transition2);
+    padding: 1rem;
+    font-weight: normal;
+}
+
+.btn-shop-pay .shop-pay-logo {
+    color: var(--white);
+    height: 150%;
+    margin-left: 4px;
+    font-size: var(--font-size-button-x-large);
+}
+
+.btn-shop-pay:hover {
+    background-color: var(--purple-hover);
+}
+
+
+/*-----------------------------------*\
+   * #Botones ocultos
+  \*-----------------------------------*/
+
+.hidden-btn {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    border-radius: 7px;
+    transition: var(--transition2);
+    padding: 0.5rem;  
+    font-size: var(--font-size-body-small); 
+    color: var(--white);
+    font-weight: bold;
+}
+
+.hidden-btn:hover {
+    background-color: var(--blue-hover);
+
+}
+
+
+
+
 
 
 /*-----------------------------------*\
@@ -471,146 +645,7 @@ body {
   \*-----------------------------------*/
 
 
-/*-----------------------------------*\
-   * #REUSED STYLE
-  \*-----------------------------------*/
 
-  .botones {
-    display: flex;
-    flex-direction: column;
-    gap: 1 rem;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
-    margin: 10px;
-    height: 45px;
-    font-weight: bold;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition2);
-}
-
-.btn:hover {
-    background-color: var(--blue-hover);
-    border-radius: var(--radius-5);
-}
-
-
-/*-----------------------------------*\
-   * #Boton de buscar
-  \*-----------------------------------*/
-
-.search-btn {
-    background-color: var(--blue);
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
-    width: 54px;
-    border-radius: 0 var(--radius-5) var(--radius-5) 0;
-}
-
-.search-btn i {
-    width: 100%;
-    height: 100%;
-    display: block;
-    font-size: var(--font-size-body-large);
-    transition: var(--transition3);
-    padding: 13px;
-}
-
-.search-btn i:hover {
-    background-color: var(--blue-hover);
-    border-radius: 0 var(--radius-5) var(--radius-5) 0;
-}
-
-
-/*-----------------------------------*\
-   * #Boton Principal
-  \*-----------------------------------*/
-
-.primary-btn {
-    width: 110px;
-    height: 45px;
-    color: var(--white);
-    background-color: var(--blue);
-    padding: 0 20px;
-    font-weight: bold;
-    border-radius: var(--radius-5);
-}
-
-
-/*-----------------------------------*\
-   * #Boton Naranja
-  \*-----------------------------------*/
-
-.secundary-btn {
-    background-color: #ffab41;
-    border: 1px solid #ffab41;
-    font-size: var(--font-size-button-large);
-    padding: 1rem 1.75rem;
-    letter-spacing: 0em;
-    width: 323px;
-    padding: 1.5rem;
-    border-radius: var(--radius-5);
-    transition: var(--transition2);
-}
-
-.secundary-btn:hover {
-    background-color: var(--orange-hover);
-}
-
-
-/*-----------------------------------*\
-   * #Boton Purpura
-  \*-----------------------------------*/
-
-.btn-shop-pay {
-    background: var(--purple);
-    border-color: var(--purple);
-    width: 548px;
-    border-radius: var(--radius-5);
-    transition: var(--transition2);
-    padding: 1rem;
-    font-weight: normal;
-}
-
-.btn-shop-pay .shop-pay-logo {
-    color: var(--white);
-    height: 150%;
-    margin-left: 4px;
-    font-size: var(--font-size-button-x-large);
-}
-
-.btn-shop-pay:hover {
-    background-color: var(--purple-hover);
-}
-
-
-/*-----------------------------------*\
-   * #Botones ocultos
-  \*-----------------------------------*/
-
-.hidden-btn {
-    background-color: var(--blue);
-    border-color: var(--blue);
-    border-radius: var(--radius-5);
-    transition: var(--transition2);
-    width: 200px;
-    font-size: var(--font-size-body-small);
-    height: 30px;
-    color: var(--white);
-    font-weight: bold;
-}
-
-.hidden-btn:hover {
-    background-color: var(--blue-hover);
-
-}
 
 /*-----------------------------------*\
    * #tarjetas
@@ -630,15 +665,28 @@ body {
   }
 
   .card-tarjetas {
-    height: 390px;
-    width: 250px;
+    height:100%;
+    width: 80%;
+    background-color: #f6f5f3;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     border-radius: 7px;
     box-shadow:  8px 8px 16px #dddddd,
                 -8px -8px 16px #ffffff;
   
+  }
+
+  .card-tarjetas .oculto {
+    background-color: transparent;
+    color: transparent;
+    transition: var(--transition2);
+  }
+
+  .card-tarjetas .oculto:hover {
+    background-color: var(--blue);
+    color: var(--white);
   }
 
   .card-tarjetas .img-product {
@@ -658,7 +706,7 @@ body {
   }
 
   .card-tarjetas .img-product img:hover {
-    transform: scale(1.5);
+    transform: scale(1.05);
   }
 
   /* titulo*/
@@ -666,6 +714,8 @@ body {
 .card-tarjetas .title-card {
  display: flex;
  justify-content: center;
+ text-align: center;
+ font-size: var(--font-size-body-large);
  
 }
 
@@ -675,13 +725,14 @@ body {
 }
 
 .card-tarjetas .title-card a:hover {
-    color: var(--blue);
+    color: var(--orange);
 }
 
 /* sub titulo*/
 
 .card-tarjetas .description-card p:nth-child(1){
     font-size: var(--font-size-body-smallest);
+    color: var(--grey);
     padding: 0 5px 10px 5px;
 }
 
@@ -701,9 +752,9 @@ body {
  .card-tarjetas .button-hide {
     display: flex;
     justify-content: center;
-    
-    
  }
+
+
 
 
 
@@ -814,28 +865,7 @@ body {
 
   
 
-  .instagram_titulo {
-    box-sizing: border-box;
-    width: 40%;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    padding: 2% 0 0 0;
-  }
 
-  .instagram_titulo h1 {
-    font-size: 2.2em;
-    font-weight: 300;
-    font-family: var(--ff-russo);
-    letter-spacing: 1px;
-  }
-
-  .instagram_titulo p {
-    font-size: 1em;
-    color: #000000a6;
-  }
 
   .instagram__grid {
     box-sizing: border-box;
