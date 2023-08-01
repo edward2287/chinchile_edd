@@ -162,24 +162,24 @@
                         Sign Up
                         <span class="underline"></span>
                     </button>
-                    <form class="form form-signup">
+                    <form action="../php/index.php" method="post" class="form form-signup">
                         <fieldset>
                             <legend>Please, enter your username, email, password and password confirmation for sign up.</legend>
                             <div class="input-block">
                                 <label for="signup-username">Username</label>
-                                <input id="signup-username" type="text" required>
+                                <input name="nombre" id="signup-username" type="text" required>
                             </div>
                             <div class="input-block">
                                 <label for="signup-email">E-mail</label>
-                                <input id="signup-email" type="email" required>
+                                <input name="email" id="signup-email" type="text" required>
                             </div>
                             <div class="input-block">
                                 <label for="signup-password">Password</label>
-                                <input id="signup-password" type="password" required>
+                                <input name="contraseña" id="signup-password" type="password" required>
                             </div>
                             <div class="input-block">
                                 <label for="signup-password-confirm">Confirm password</label>
-                                <input id="signup-password-confirm" type="password" required>
+                                <input  id="signup-password-confirm" type="password" required>
                             </div>
                         </fieldset>
                         <button type="submit" class="btn-signup">Continue</button>
