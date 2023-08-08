@@ -148,12 +148,11 @@ body {
 }
 
 
-
 /*-----------------------------------*\
    * #REUSED STYLE
   \*-----------------------------------*/
 
-  .botones {
+.botones {
     display: flex;
     flex-direction: column;
     gap: 1 rem;
@@ -180,7 +179,6 @@ body {
 }
 
 .container {
-
     margin: 30px 45px;
 }
 
@@ -193,19 +191,19 @@ body {
     align-items: center;
     gap: 3px;
     padding: 2% 0 0 0;
-  }
+}
 
-  .container_title .title-box {
+.container_title .title-box {
     font-size: 2.2em;
     font-weight: 300;
     font-family: var(--ff-russo);
     letter-spacing: 1px;
-  }
+}
 
-  .container_title .paragraph-box {
+.container_title .paragraph-box {
     font-size: 1em;
     color: #000000a6;
-  }
+}
 
 
 /*-----------------------------------*\
@@ -306,20 +304,15 @@ body {
     border-color: var(--blue);
     border-radius: 7px;
     transition: var(--transition2);
-    padding: 0.5rem;  
-    font-size: var(--font-size-body-small); 
+    padding: 0.5rem;
+    font-size: var(--font-size-body-small);
     color: var(--white);
     font-weight: bold;
 }
 
 .hidden-btn:hover {
     background-color: var(--blue-hover);
-
 }
-
-
-
-
 
 
 /*-----------------------------------*\
@@ -330,9 +323,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     background-color: var(--black);
-  
 }
-
 
 .busquedaS {
     box-sizing: border-box;
@@ -341,7 +332,6 @@ body {
     justify-content: space-between;
     gap: 3%;
     padding: 1% 7%;
-
 }
 
 .busqueda__logoContenedor {
@@ -351,10 +341,8 @@ body {
 }
 
 .busqueda__logoContenedor a img {
-
     width: 100%;
     height: 100%;
-
 }
 
 .tituloGonzo {
@@ -369,9 +357,7 @@ body {
     display: flex;
     justify-content: end;
     padding-right: 15%;
-    
 }
-
 
 .busqueda__logoImg {
     width: 100%;
@@ -382,19 +368,14 @@ body {
     align-items: center;
     width: 50%;
     background-color: var(--black);
-   
 }
 
-.busqueda__contenedor .menuNavegacion{
-
+.busqueda__contenedor .menuNavegacion {
     background-color: var(--black);
-    
 }
 
-.busqueda__contenedor .menuNavegacion a{
-
-   color: var(--white);
-    
+.busqueda__contenedor .menuNavegacion a {
+    color: var(--white);
 }
 
 .busqueda__contenedorInput {
@@ -487,11 +468,12 @@ body {
 }
 
 .buesqueda__sesionEnlaceUno:hover svg {
-   fill: var(--blue);
+    fill: var(--blue);
 }
+
 .buesqueda__sesionEnlaceUno:hover .login {
-  color: var(--blue);
- }
+    color: var(--blue);
+}
 
 .login {
     color: white;
@@ -513,6 +495,7 @@ body {
     color: var(--blue);
 }
 
+
 /*-----------------------------------*\
    * Menu de Navegacion
   \*-----------------------------------*/
@@ -524,13 +507,10 @@ body {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--white);
-    
-   
 }
 
 .menuNavegacion__enlaceFlexss {
     width: 0%;
-   
 }
 
 .menuNavegacion__enlaceFlexListaElemento {
@@ -540,7 +520,6 @@ body {
     width: 7rem;
     height: 4em;
     gap: 3%;
-    
 }
 
 .menuNavegacion a {
@@ -566,11 +545,9 @@ body {
     flex-direction: column;
     display: none;
     padding: 1%;
-   
 }
 
 .contenedor__menuNavegacion {
- 
     height: 3.4em;
     display: flex;
     align-items: center;
@@ -591,7 +568,6 @@ body {
     align-items: end;
     gap: 10px;
     padding: 5%;
-    
 }
 
 .contenedorLista__elementoAparece li a {
@@ -630,7 +606,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .container-cards {
@@ -639,15 +614,14 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 35px;
     row-gap: 45px;
-    padding:0 5%;
-    margin: 50px 0 ;
-
+    padding: 0 5%;
+    margin: 50px 0;
 }
 
 .card-tarjetas {
     height: 100%;
     width: 100%;
-    padding:  5% 5%;
+    padding: 5% 5%;
     background-color: #f6f5f3;
     display: flex;
     flex-direction: column;
@@ -729,4 +703,137 @@ body {
 .card-tarjetas .button-hide {
     display: flex;
     justify-content: center;
+}
+
+
+/*-----------------------------------*\
+   * #FOOTER
+  \*-----------------------------------*/
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer_principal {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #2f2f2fe4;
+    padding: 6% 7% 3% 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_principalSeccion1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-basis: 20%;
+}
+
+.footer_principalSeccion1 img {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.footer_principalSeccion1 p {
+    color: var(--white);
+}
+
+.footer_principalSeccion1 a {
+    color: rgb(0, 145, 255);
+}
+
+.footer_principalSeccion1 a:hover {
+    color: rgb(0, 179, 255);
+}
+
+.footer_principalSeccion2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_principalSeccion2 h5 {
+    color: var(--white);
+    font-family: var(--ff-russo);
+    font-size: 1.4em;
+    font-weight: 100;
+    margin-bottom: 45px;
+}
+
+.footer_principalSeccion2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.footer_principalSeccion2 ul li a {
+    color: rgb(0, 145, 255);
+}
+
+.footer_principalSeccion2 ul li a:hover {
+    color: rgb(0, 179, 255);
+}
+
+.footer_principalSeccionFormulario {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_principalSeccionFormulario h5 {
+    color: var(--white);
+    font-family: var(--ff-russo);
+    font-size: 1.4em;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
+
+.footer_principalSeccionFormulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer_principalSeccionFormulario label {
+    color: var(--white);
+}
+
+.footer_principalSeccionFormulario input {
+    background-color: var(--white);
+    width: 120%;
+    height: 3em;
+    margin-bottom: 18px;
+}
+
+.footer_principalSeccionFormulario button {
+    width: 30%;
+    padding: 2% 0;
+    background-color: rgb(0, 145, 255);
+    color: var(--white);
+    letter-spacing: 1px;
+    border: none;
+}
+
+.footer_principalSeccionFormulario button:hover {
+    background-color: rgb(0, 179, 255);
+}
+
+.footer_secundario {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: #1d1d1d;
+}
+
+.footer_secundario p {
+    color: var(--white);
+    font-size: .9em;
+    font-weight: 300;
 }
