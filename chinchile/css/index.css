@@ -1338,98 +1338,88 @@ body {
 }
 
 
+
 /*-----------------------------------*\
-   * SECCION CARRUSEL
+   * #SECCION kitchen cleaning
   \*-----------------------------------*/
 
 
-/*
 
-.testimonial-client svg {
-    fill: #ebd10c;
-}
-
-.wrapper {
+  .container_kitchen {
     display: flex;
-    justify-content: center;
-}
+    width: 100%;
+    height: 90vh;
+  }
 
-.slider-testimonial {
-    width: 60%;
-}
-
-.testimonial-item {
+  .container_kitchen .container_bg1 {
+    background: url(../recursos2/Restaurant-Cleaners-blue.jpg);
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.testimonial-client {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5% 0;
-    gap: 6px;
-}
-
-.testimonial-image {
-    background-image: url(../recursos2/concepto-emociones-personas-foto-cabeza-hombre-atractivo-feliz-riendo-sonriendo-exprese-regocijo_1258-26742.avif);
-    background-position: center;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-   width: 20%;
-    height: 8rem;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.testimonial-image--b {
-    background-image: url(../recursos2/stock-photo-handsome-man-smiling.jpg);
     background-position: center;
+  }
+
+  .container_kitchen .container_bg2  {
+    background: url(../recursos2/kitchen_product_cleaning.jpeg);
+    width: 50%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-   width: 20%;
-    height: 8rem;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.testimonial-image--c {
-    background-image: url(../recursos2/stock-photo-handsome-man-smiling-camera-isolated.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   width: 20%;
-    height: 8rem;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
+  }
 
-.testimonial-text p {
-    font-size: var(--font-size-body-small);
-    font-style: italic;
-    line-height: 1.6em;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: rgba(0, 0, 0, 0.661);
-    padding: 0 1.5%;
-}
+  .container_info_kitchen_father {
+    position: absolute;
+    background-color: var(--white);
+    width: 650px;
+    height: 500px;
+    z-index: 10;
+    top: 2690px;
+    left: 150px;
+  }
 
-.testimonial-name {
+  .container_info_kitchen .title_info_kitchen {
     display: flex;
-    justify-content: center;
-    margin-bottom: 3%;
-}
+    width: 100%;
+    padding: 40px;
+    
 
-.testimonial-name h4 {
-    color: #000000a7;
-}*/
+  }
+
+  .container_info_kitchen .title_info_kitchen .title_kitchen:nth-child(1) {
+    width: 50%;
+    border-left: 2px solid #0c579a; 
+  }
+
+  .container_info_kitchen .title_info_kitchen .title_kitchen h4 {
+    padding-left: 20px;
+  }
+
+
+  .container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(1) {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #0c579a;
+  }
+
+  .container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(2) {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #96C63A;
+  }
+
+
+
+
+
+
+
 
 
 /*-----------------------------------*\
    * #SECCION INSTAGRAM
-  \*-----------------------------------*/
+  \*-----------------------------------
 
 .contenedor_instagram {
     box-sizing: border-box;
@@ -1613,10 +1603,10 @@ body {
     grid-row: 3/4;
 }
 
-
+*/
 /*-----------------------------------*\
    * #BOTONES INSTAGRAM
-  \*-----------------------------------*/
+  \*-----------------------------------
 
 .instagam_botones {
     box-sizing: border-box;
@@ -1665,7 +1655,7 @@ body {
     gap: 3px;
 }
 
-
+*/
 /*-----------------------------------*\
    * #IFRAME MAP
   \*-----------------------------------*/
