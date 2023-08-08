@@ -69,14 +69,14 @@ if(!$connection)
         echo "<h3>Tabla seleccionada:</h3>" ;
         }
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
-        $instruccion_SQL = "INSERT INTO tabla_form (nombre, email, contrasena)
+        $instruccion_SQL = "INSERT INTO registro (nombre, email, contrasena)
                              VALUES ('$nombre','$email','$contraseña')";
                            
                             
         $resultado = mysqli_query($connection,$instruccion_SQL);
 
         //$consulta = "SELECT * FROM tabla where id ='2'"; si queremos que nos muestre solo un registro en especifivo de ID
-        $consulta = "SELECT * FROM tabla_form";
+        $consulta = "SELECT * FROM registro";
         
 $result = mysqli_query($connection,$consulta);
 if(!$result) 
