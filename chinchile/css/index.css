@@ -336,21 +336,16 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1%;
-  
 }
 
 .busqueda__logoContenedor a {
     display: flex;
     justify-content: center;
-  
 }
 
 .busqueda__logoContenedor img {
     width: 80%;
-
 }
-
-
 
 .busqueda__contenedor {
     display: flex;
@@ -446,8 +441,6 @@ body {
     color: var(--black);
 }
 
-
-
 .buesqueda__sesionEnlaceUno p {
     color: var(--black);
     font-size: 1em;
@@ -457,11 +450,12 @@ body {
 .buesqueda__sesionEnlaceUno:hover svg {
     fill: var(--blue);
     transition: var(--transition3)
- }
- .buesqueda__sesionEnlaceUno:hover p {
-   color: var(--blue);
-   transition: var(--transition3)
-  }
+}
+
+.buesqueda__sesionEnlaceUno:hover p {
+    color: var(--blue);
+    transition: var(--transition3)
+}
 
 .buesqueda__sesionEnlaceDos {
     width: 25%;
@@ -1075,10 +1069,94 @@ body {
    * SECCION ELIAS
   \*-----------------------------------*/
 
+.padre {
+    margin: 5% auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 97%;
+    height: 60vh;
+    border-radius: 20px 5px 20px 5px;
+    background-image: url(../recursos2/limp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 8px 8px 16px #a8a8a8, -8px -8px 16px #ffffff;
+    /*background:linear-gradient(125deg, #06026b, #191585);*/
+}
+
+#tar {
+    margin: 2% auto;
+    width: 290px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.57);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+#tar:hover {
+    background-color: rgb(255, 255, 255, 0.94);
+    transition: 0.5s;
+    cursor: pointer;
+    transform: scale();
+}
+
+#tar hr {
+    width: 50%;
+}
+
+#buttom {
+    text-align: center;
+}
+
+#buttom a {
+    text-decoration: none;
+    color: blue;
+}
+
+#buttom a::before,
+#buttom a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(54, 17, 205);
+    transition: width 0.3s ease;
+}
+
+#buttom a::before {
+    transform-origin: left;
+}
+
+#buttom a::after {
+    transform-origin: right;
+}
+
+#buttom a:hover::before,
+#buttom a:hover::after {
+    width: 100%;
+}
+
+.elemt--titulo {
+    font-size: 2em;
+    text-align: center;
+}
+
+.elemt--text {
+    margin: 10%;
+    text-align: center;
+}
+
 
 /*contenedor descriptivo de los productos */
 
-.supplies {
+
+/* .supplies {
     display: flex;
     justify-content: center;
     width: 85%;
@@ -1089,17 +1167,21 @@ body {
     background-color: #000000;
     /* background: linear-gradient(125deg, #e6e6e6, #ffffff);
     box-shadow: 8px 8px 16px #a8a8a8, -8px -8px 16px #ffffff;*/
-    -webkit-box-shadow: inset -1px 4px 81px -36px rgba(255, 255, 255, 1);
+
+
+/* -webkit-box-shadow: inset -1px 4px 81px -36px rgba(255, 255, 255, 1);
     -moz-box-shadow: inset -1px 4px 81px -36px rgba(255, 255, 255, 1);
     box-shadow: inset -1px 4px 81px -36px rgba(255, 255, 255, 1);
-}
+} */
 
-
+*/
 /* termino del contenedor descriptivo de los productos */
 
 
 /*tarjeta de la descripcion de los productos */
 
+
+/* 
 .sup {
     display: flex;
     flex-direction: column;
@@ -1214,7 +1296,7 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
-}
+} */
 
 
 /*tarjeta de la descripcion de los productos */
@@ -1236,7 +1318,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .container-cards {
@@ -1245,15 +1326,14 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 35px;
     row-gap: 45px;
-    padding:0 5%;
-    margin: 50px 0 ;
-
+    padding: 0 5%;
+    margin: 50px 0;
 }
 
 .card-tarjetas {
     height: 100%;
     width: 100%;
-    padding:  5% 5%;
+    padding: 5% 5%;
     background-color: #f6f5f3;
     display: flex;
     flex-direction: column;
@@ -1338,38 +1418,35 @@ body {
 }
 
 
-
 /*-----------------------------------*\
    * #SECCION kitchen cleaning
   \*-----------------------------------*/
 
-
-
-  .container_kitchen {
+.container_kitchen {
     display: flex;
     width: 100%;
     height: 90vh;
-  }
+}
 
-  .container_kitchen .container_bg1 {
+.container_kitchen .container_bg1 {
     background: url(../recursos2/Restaurant-Cleaners-blue.jpg);
     width: 50%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
+}
 
-  .container_kitchen .container_bg2  {
+.container_kitchen .container_bg2 {
     background: url(../recursos2/kitchen_product_cleaning.jpeg);
     width: 50%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
+}
 
-  .container_info_kitchen_father {
+.container_info_kitchen_father {
     position: absolute;
     background-color: var(--white);
     width: 650px;
@@ -1377,44 +1454,34 @@ body {
     z-index: 10;
     top: 2690px;
     left: 150px;
-  }
+}
 
-  .container_info_kitchen .title_info_kitchen {
+.container_info_kitchen .title_info_kitchen {
     display: flex;
     width: 100%;
     padding: 40px;
-    
+}
 
-  }
-
-  .container_info_kitchen .title_info_kitchen .title_kitchen:nth-child(1) {
+.container_info_kitchen .title_info_kitchen .title_kitchen:nth-child(1) {
     width: 50%;
-    border-left: 2px solid #0c579a; 
-  }
+    border-left: 2px solid #0c579a;
+}
 
-  .container_info_kitchen .title_info_kitchen .title_kitchen h4 {
+.container_info_kitchen .title_info_kitchen .title_kitchen h4 {
     padding-left: 20px;
-  }
+}
 
-
-  .container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(1) {
+.container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(1) {
     font-size: 45px;
     text-transform: uppercase;
     color: #0c579a;
-  }
+}
 
-  .container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(2) {
+.container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(2) {
     font-size: 45px;
     text-transform: uppercase;
     color: #96C63A;
-  }
-
-
-
-
-
-
-
+}
 
 
 /*-----------------------------------*\
@@ -1604,6 +1671,8 @@ body {
 }
 
 */
+
+
 /*-----------------------------------*\
    * #BOTONES INSTAGRAM
   \*-----------------------------------
@@ -1656,6 +1725,8 @@ body {
 }
 
 */
+
+
 /*-----------------------------------*\
    * #IFRAME MAP
   \*-----------------------------------*/
@@ -1675,8 +1746,7 @@ body {
    * #FOOTER
   \*-----------------------------------*/
 
-
-  .footer {
+.footer {
     box-sizing: border-box;
     width: 100%;
 }
@@ -1695,26 +1765,23 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-
     flex-basis: 20%;
 }
 
 .footer_principalSeccion1 img {
     width: 100%;
     margin-bottom: 45px;
-   
 }
 
-.footer_principalSeccion1 p{
+.footer_principalSeccion1 p {
     color: var(--white);
 }
 
-
-.footer_principalSeccion1 a{
+.footer_principalSeccion1 a {
     color: rgb(0, 145, 255);
 }
 
-.footer_principalSeccion1 a:hover{
+.footer_principalSeccion1 a:hover {
     color: rgb(0, 179, 255);
 }
 
@@ -1725,55 +1792,52 @@ body {
 }
 
 .footer_principalSeccion2 h5 {
-   color: var(--white);
-   font-family: var(--ff-russo);
-   font-size: 1.4em;
-   font-weight: 100;
-   margin-bottom: 45px;
+    color: var(--white);
+    font-family: var(--ff-russo);
+    font-size: 1.4em;
+    font-weight: 100;
+    margin-bottom: 45px;
 }
 
 .footer_principalSeccion2 ul {
     display: flex;
     flex-direction: column;
     gap: 17px;
- }
+}
 
- .footer_principalSeccion2 ul li a {
-    color:  rgb(0, 145, 255);
- }
+.footer_principalSeccion2 ul li a {
+    color: rgb(0, 145, 255);
+}
 
- .footer_principalSeccion2 ul li a:hover {
-    color:rgb(0, 179, 255);
- }
+.footer_principalSeccion2 ul li a:hover {
+    color: rgb(0, 179, 255);
+}
 
- .footer_principalSeccionFormulario {
+.footer_principalSeccionFormulario {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
- }
+}
 
- .footer_principalSeccionFormulario h5 {
+.footer_principalSeccionFormulario h5 {
     color: var(--white);
-   font-family: var(--ff-russo);
-   font-size: 1.4em;
-   font-weight: 100;
-   margin-bottom: 35px;
- }
+    font-family: var(--ff-russo);
+    font-size: 1.4em;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
 
- 
 .footer_principalSeccionFormulario form {
-
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .footer_principalSeccionFormulario label {
-
     color: var(--white);
- }
+}
 
-.footer_principalSeccionFormulario input  {
+.footer_principalSeccionFormulario input {
     background-color: var(--white);
     width: 120%;
     height: 3em;
@@ -1781,17 +1845,16 @@ body {
 }
 
 .footer_principalSeccionFormulario button {
-width: 30%;
- padding: 2% 0;
- background-color: rgb(0, 145, 255);
- color: var(--white);
- letter-spacing: 1px;
- border: none;
+    width: 30%;
+    padding: 2% 0;
+    background-color: rgb(0, 145, 255);
+    color: var(--white);
+    letter-spacing: 1px;
+    border: none;
 }
 
 .footer_principalSeccionFormulario button:hover {
-     background-color: rgb(0, 179, 255); 
-     
+    background-color: rgb(0, 179, 255);
 }
 
 .footer_secundario {

@@ -3,7 +3,7 @@
     $db = new  Database();
     $con = $db->conectar();
     $sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
-    $sql->excute();
+    $sql->execute();
     $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -18,6 +18,104 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!--Cabecera de la pagina-->
+    <header class="headerS">
+
+        <!--Barra de busqueda-->
+        <article class="busquedaS">
+            <section class="busqueda__logoContenedor">
+                <a href="index.html">
+                    <img src="../recursos2/logo_gonzo.png" alt="">
+                </a>
+
+            </section>
+            <section class="busqueda__contenedor">
+                <nav class="menuNavegacion">
+                    <a href="../html/index.html">Home</a>
+                    <ul class="menuNavegacion__enlaceFlexLista">
+                        <li class="contenedor__menuNavegacion">
+                            <a class="menuNavegacion__enlaceFlexss" href="../html/products.html">
+                                <section class="menuNavegacion__enlaceFlexListaElemento">
+                                    <p>Products</p>
+                                    <svg aria-hidden="true" focusable="false" role="presentation" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-chevron-down">
+                                        <path class="icon-chevron-down-left" d="M4 4.5L7 1.5" stroke="currentColor"
+                                            stroke-width="1.25" stroke-linecap="square"></path>
+                                        <path class="icon-chevron-down-right" d="M4 4.5L1 1.5" stroke="currentColor"
+                                            stroke-width="1.25" stroke-linecap="square"></path>
+                                    </svg>
+                                </section>
+                            </a>
+                            <ul class="aparecess">
+                                <li class="elementoAparece">
+                                    <section class="section__elementoAparece">
+                                        <ul class="lista__elementoAparece ">
+                                            <section class="contenedorLista__elementoAparece">
+                                                <li>
+                                                    <a href="">
+                                                        Kitchen
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Janitorial
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Laundry
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Automotive
+                                                    </a>
+                                                </li>
+
+                                            </section>
+
+                                        </ul>
+
+                                    </section>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a href="">Shop</a>
+                    <a href="../html/about_us.html">About</a>
+                </nav>
+            </section>
+
+            <section class="buesqueda__sesion">
+                <a class="buesqueda__sesionEnlaceUno" href="../html/login.html">
+                    <svg class="icon-account " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="none">
+                        <path
+                            d="M11.3336 14.4447C14.7538 14.4447 17.5264 11.6417 17.5264 8.18392C17.5264 4.72616 14.7538 1.9231 11.3336 1.9231C7.91347 1.9231 5.14087 4.72616 5.14087 8.18392C5.14087 11.6417 7.91347 14.4447 11.3336 14.4447Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M20.9678 24.0769C19.5098 20.0278 15.7026 17.3329 11.4404 17.3329C7.17822 17.3329 3.37107 20.0278 1.91309 24.0769"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                    <p class="login">Login</p>
+                </a>
+                <a class="buesqueda__sesionEnlaceDos" href=""><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.88053 4.00003C7.35284 1.71796 9.37425 0.00268555 11.7963 0.00268555H12.2005C14.6226 0.00268555 16.644 1.71796 17.1163 4.00003L19.811 4.00003C22.1161 4.00003 23.9442 5.94322 23.8036 8.24402L23.2424 17.427C23.0167 21.1203 19.9556 24 16.2554 24L7.74447 24C4.04429 24 0.983205 21.1203 0.757505 17.427L0.196322 8.24402C0.0557157 5.94322 1.88378 4.00003 4.18887 4.00003L6.88053 4.00003ZM8.42715 4.00003L15.5697 4.00003C15.1315 2.55474 13.7889 1.50269 12.2005 1.50269H11.7963C10.2079 1.50269 8.86527 2.55474 8.42715 4.00003ZM16.2554 22C18.8984 22 21.0849 19.9431 21.2461 17.305L21.8073 8.12202C21.8776 6.97162 20.9636 6.00003 19.811 6.00003L4.18887 6.00003C3.03633 6.00003 2.12229 6.97162 2.1926 8.12202L2.75378 17.305C2.915 19.9431 5.10149 22 7.74447 22L16.2554 22ZM16.4705 8.49079C16.0563 8.49079 15.7205 8.82658 15.7205 9.24079V10.0414C15.7205 12.097 14.054 13.7635 11.9984 13.7635C9.94271 13.7635 8.27626 12.097 8.27626 10.0414V9.24079C8.27626 8.82658 7.94048 8.49079 7.52626 8.49079C7.11205 8.49079 6.77626 8.82658 6.77626 9.24079V10.0414C6.77626 12.9254 9.11428 15.2635 11.9984 15.2635C14.8825 15.2635 17.2205 12.9254 17.2205 10.0414V9.24079C17.2205 8.82658 16.8847 8.49079 16.4705 8.49079Z"
+                            fill="currentColor"></path>
+                    </svg></a>
+            </section>
+        </article>
+
+    </header>
+    <!---Fin de Barra de busqueda-->
+
+
+
+<!---Seccion para mostrar productos-->
 <section>
         <div class="containerProducts" id="products">
 
@@ -64,5 +162,6 @@
 
         </div>
 </section>
+<!---Fin de Seccion para mostrar productos-->
 </body>
 </html>
