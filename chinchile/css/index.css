@@ -1422,66 +1422,159 @@ body {
    * #SECCION kitchen cleaning
   \*-----------------------------------*/
 
-.container_kitchen {
+
+
+  .container_kitchen {
     display: flex;
     width: 100%;
-    height: 90vh;
-}
+    height: auto;
+    border-radius: 5px;
+  }
 
-.container_kitchen .container_bg1 {
+  .container_kitchen .container_bg1 {
     background: url(../recursos2/Restaurant-Cleaners-blue.jpg);
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.container_kitchen .container_bg2 {
-    background: url(../recursos2/kitchen_product_cleaning.jpeg);
-    width: 50%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.container_info_kitchen_father {
-    position: absolute;
+  .container_info_kitchen_father {
+    
     background-color: var(--white);
-    width: 650px;
-    height: 500px;
+    width: 60%;
+    margin: 20px 0 20px 0;
+    height: auto;
     z-index: 10;
-    top: 2690px;
-    left: 150px;
-}
+    border-radius: 10px;
+  
+  }
 
-.container_info_kitchen .title_info_kitchen {
+  .container_info_kitchen .title_info_kitchen {
     display: flex;
     width: 100%;
     padding: 40px;
-}
+    
 
-.container_info_kitchen .title_info_kitchen .title_kitchen:nth-child(1) {
+  }
+
+  .container_info_kitchen .title_info_kitchen .title_kitchen:nth-child(1) {
     width: 50%;
-    border-left: 2px solid #0c579a;
-}
+    border-left: 2px solid #0c579a; 
+  }
 
-.container_info_kitchen .title_info_kitchen .title_kitchen h4 {
+  .container_info_kitchen .title_info_kitchen .title_kitchen h4 {
     padding-left: 20px;
-}
+  }
 
-.container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(1) {
+
+  .container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(1) {
     font-size: 45px;
     text-transform: uppercase;
-    color: #0c579a;
-}
+    color: #011550;
+  }
 
-.container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(2) {
+  .container_info_kitchen .title_info_kitchen .title_kitchen h4:nth-child(2) {
     font-size: 45px;
     text-transform: uppercase;
     color: #96C63A;
-}
+  }
+  
+
+  /*-----------------------------------*\
+   * #SECCION Acordeon
+  \*-----------------------------------*/
+
+  .options_service {
+    box-shadow: 3px 2px 34px -14px rgba(0,0,0,0.72);
+    max-width: 85%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px 10px 20px 10px;
+    margin: auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content .accordion_item {
+    background-color: #e5dfff;
+    transition: .3s;
+  }
+
+  .content .accordion_item:hover {
+    background-color: #96C63A;
+  }
+  
+  .accordion_item {
+    border-radius: 5px;
+  }
+  
+  .accordion_item:hover {
+    opacity: 0.9;
+  }
+  
+  .accordion_header {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  
+  .accordion_content {
+
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    height: 0;
+    transition: all .5s ease;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    color: #011550;
+    
+  }
+
+  .list_accordion {
+    padding: 20px 30px;
+    line-height: 25px;
+  }
+
+  .list_accordion ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  .list_accordion ul li i {
+    display: block;
+    color: #96C63A;
+    padding-right: 10px;
+  }
+  
+  .active {
+    padding-bottom: 10px;
+  }
+  
+  span, .icon {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  p {
+    text-align: justify;
+  }
+
+  
+
+
 
 
 /*-----------------------------------*\
