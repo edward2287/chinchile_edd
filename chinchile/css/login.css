@@ -1017,8 +1017,8 @@ AREA FORMULARIO
 
 
 .overlay-container .overlay .overlay-panel p {
-	font-size: 14px;
-	font-weight: 100;
+	font-size: 15px;
+	font-weight: bold;
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
@@ -1026,6 +1026,7 @@ AREA FORMULARIO
 
 .container .form-container .formulario span {
 	font-size: 12px;
+    
 }
 
 .social-container a {
@@ -1033,12 +1034,36 @@ AREA FORMULARIO
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
+    transition: 0.5s;
+
+}
+
+.social-container a:hover:nth-child(1) {
+    background-color: #3b5998 ;
+    color: #fff;
+}
+
+.social-container a:hover:nth-child(2) {
+    background-color: #f53e28 ;
+    color: #fff;
+}
+
+.social-container a:hover:nth-child(3) {
+    background-color: black ;
+    color: #fff;
+}
+
+.formulario a {
+    color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
 }
 
 .formulario button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #0071ed;
+	background-color: #0071ed;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -1056,12 +1081,28 @@ AREA FORMULARIO
 	outline: none;
 }
 
-.formulario button .ghost {
+.overlay-panel button.ghost {
+	border-radius: 20px;
+	border: 1px solid #FFFF;
 	background-color: transparent;
-	border-color: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
 }
 
-form {
+.overlay-panel button.ghost:active {
+    transform: scale(0.95);
+}
+
+.overlay-panel button.ghost:focus {
+    outline: none;
+}
+
+.formulario {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -1078,6 +1119,12 @@ input {
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+}
+
+.container_father {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -1154,9 +1201,11 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
+	/* background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C); */
+    background: rgb(0,122,255);
+    background: linear-gradient(157deg, rgba(0,122,255,1) 0%, rgba(0,86,180,1) 25%, rgba(0,38,80,1) 59%, rgba(0,38,80,1) 88%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
