@@ -154,7 +154,7 @@ if ( $id == "" || $token == "") {
                     <?php echo $descripcion; ?>
                 </p>
                 <div class="button-hide oculto2">
-                    <button class="hidden-btn hidden-btn--a">Add to Car</button>
+                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp ?>')">Add to Car</button>
                         <button class="hidden-btn hidden-btn--b" >Buy Now</button>
                     </div>
             </section>
@@ -215,6 +215,22 @@ if ( $id == "" || $token == "") {
 
     </footer>
     <!--Termino Footer-->
+
+    <script>
+        function addProducto(id, token) {
+            let url = 'clases/carrito.php'
+            let formdData = new formdData ()
+            formdData.append('id', id)
+            formdData.append('token', token)
+
+            fetch(url,{
+                method: 'POST', 
+                body: formdData,
+                mode: 'cors'
+            }).then(response => response.json())
+        }
+    </script>
+
 </body>
 
 </html>
