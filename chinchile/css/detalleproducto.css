@@ -588,173 +588,92 @@ body {
 }
 
 
-/*tarjeta de la descripcion de los productos */
+/*DETALLES DE PRODUCTOS */
 
 
 /*-----------------------------------*\
-   * SECCION Edward
+   * SECCION Santos
   \*-----------------------------------*/
 
 
-/*-----------------------------------*\
-   * #tarjetas
-  \*-----------------------------------*/
-/* navegador */
 
-
-
-.container_title_Nav {
+.containeres {
     box-sizing: border-box;
-    width: 35%;
-    padding: 1% 0;
-    border: 1px solid green;
+    width: 100%;
+
+    padding: 5% 0;
+}
+
+.row {
+    box-sizing: border-box;
+    width: 100%;
+
     display: flex;
     justify-content: space-evenly;
-    background: rgba( 22, 22, 22, 0.75 );
-    backdrop-filter: blur( 19.5px );
-    -webkit-backdrop-filter: blur( 19.5px );
-    border-radius: 5px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-.container_title_Nav a {
-    font-family: var(--ff-russo);
-    color: var(--white);
-
-  
-}
-
-#enlaceActivo {
-    color: #007aff;
 }
 
 
-
-/* imagen*/
-
-.containerProducts {
-    display: flex;
-    flex-direction: column;
+.row_img {
+    display:flex;
     align-items: center;
-}
-
-.container-cards {
-    box-sizing: border-box;
-    background-image: url(../recursos2/Restaurant-Cleaners-blue.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 4% 5%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    justify-content: center;
-    gap: 35px;
-    row-gap: 45px;
-    margin: 50px 0;
-}
-
-.card-tarjetas {
-    height: 100%;
-    width: 100%;
-    padding: 5% 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 5%;
-    border-radius: 7px;
-    background: rgba(255, 255, 255, 0.52);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur(7px );
-    -webkit-backdrop-filter: blur( 18px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    cursor: pointer;
-}
-
-.card-tarjetas .oculto {
-    background-color: transparent;
-    color: transparent;
-    transition: var(--transition2);
-}
-
-.card-tarjetas .oculto:hover {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-.card-tarjetas .img-product {
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.card-tarjetas .img-product a img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    mix-blend-mode:multiply;
-    transition: var(--transition2);
-}
-
-.card-tarjetas:hover .img-product img {
-    transform: scale(1.05);
-}
-
-
-/* titulo*/
-
-.card-tarjetas .title-card {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: var(--font-size-body-large);
-}
-
-.card-tarjetas .title-card a {
-    color: black;
-    transition: var(--transition2);
-}
-
-.card-tarjetas:hover .title-card a {
-    color: orangered;
-}
-
-
-/* sub titulo*/
-
-.description-card {
-    width: 100%;
-    display: flex;
    
-    justify-content: end;
-    align-items: center;
-    padding-right: 12%;
+}
+
+.row_img img {
+    width: 100%;
+}
+
+.row_txt {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
     
 }
 
- .pricess {
-    font-size: 1.2em;
-    color: #007b21;
-   /* color: var(--blue);*/
-    padding: 0 5px 10px 5px;
+.row_txt h1 {
+    font-size: 2em;
+}
+
+.row_txt h2 {
+  color: rgb(2, 197, 2);
 }
 
 
-
-/* boton*/
-
-.card-tarjetas .button-hide {
+.row_txt p {
     display: flex;
+    padding: 2% 0;
+    line-height: 1.8em;
+    text-align: justify;
+
+    width: 100%;
+}
+
+ .button-hide {
+    display: flex;
+    justify-content: space-evenly;
     gap: 25px;
+
    
 }
 
 .hidden-btn--a {
-    background-color: orangered;
+    padding: 2%;
+    background-color: var(--blue);
 }
 
 .hidden-btn--a:hover {
-    background-color: rgb(212, 32, 0);
+    background-color: var(--blue-hover);
+}
+
+
+.hidden-btn--b {
+    padding: 2.5%;
+    background-color: rgb(2, 197, 2);
+}
+
+.hidden-btn--b:hover {
+    background-color: green;
 }
 
 

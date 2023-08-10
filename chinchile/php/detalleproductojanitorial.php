@@ -1,10 +1,39 @@
 <?php
+require 'config.php';
 require 'dtbproducto.php';
 $db = new  Database();
 $con = $db->conectar();
-$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
-$sql->execute();
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$id = isset($_GET["id"]) ? $_GET["id"] : ""; 
+$token= isset($_GET["token"]) ? $_GET["token"] : "" ;
+
+if ( $id == "" || $token == "") {
+    echo "Error al procesar la peticion";
+    exit;
+} else {
+    $token_tmp= hash_hmac("sha1", $id, KEY_TOKEN);
+    if ($token== $token_tmp) {
+        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'janitorial'  ");
+        $sql->execute([$id]);
+        if ($sql->fetchColumn() > 0) {
+            $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento FROM productos WHERE id=? AND activo=1 AND categoria = 'janitorial'  ");
+            $sql->execute([$id]);
+            $row = $sql->fetch(PDO::FETCH_ASSOC);
+            $nombre = $row ["nombre"];
+            $descripcion = $row ["descripcion"];
+            $precio = $row ["precio"];
+            $descuento = $row ["descuento"];
+            $precio_decuento = $precio - (($precio * $descuento) / 100);
+            
+        }
+      
+    } else {
+        echo "Error al procesar la peticion";
+        exit;
+    }
+};
+
+
 ?>
 
 
@@ -15,7 +44,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/producto.css">
+    <link rel="stylesheet" href="../css/detalleproducto.css">
     <title>Document</title>
 </head>
 
@@ -52,22 +81,22 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                                         <ul class="lista__elementoAparece ">
                                             <section class="contenedorLista__elementoAparece">
                                                 <li>
-                                                    <a href="">
+                                                    <a href="./productokitchen.php">
                                                         Kitchen
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="">
+                                                    <a href="./productojanitorial.php">
                                                         Janitorial
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="">
+                                                    <a href="./productolaundry.php">
                                                         Laundry
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="">
+                                                    <a href="./productoautomotive.php">
                                                         Automotive
                                                     </a>
                                                 </li>
@@ -106,56 +135,34 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     </header>
     <!---Fin de Barra de busqueda-->
 
-
-
-    <!---Seccion para mostrar productos-->
-    <section>
-        <div class="containerProducts" id="products">
-
-            <div class="container_title">
-                <h2 class="title-box">Gonzo Kleen Products</h2>
-                <p class="paragraph-box">We innovate from commercial cleaning products to products geared toward industrial level cleaning jobs</p>
-            </div>
-
-            <div class="container-cards">
-
-                <div class="card-tarjetas">
-                    <div class="img-product">
-                        <a href=""><img src="../recursos2/Janitorial-All-Purpose-Cleaners.jpg" alt=""></a>
-
+    <!--Detalle de producto-->
+    <article class="containeres">
+        <section class="row">
+            <section class= "row_img">
+            <?php                       
+                        $img = "../images/productos/" . $id . "/principal.png";
+                        if (!file_exists($img))
+                        $img = "../images/no-img.png"
+                        ?>
+                        <a href=""><img src="<?php echo $img; ?>"></a>
+               
+            </section>
+            <section class= "row_txt">
+                <h1><?php echo $nombre; ?></h1>
+                <h2><?php echo MONEDA . number_format($precio, 2, ".", ",")  ; ?></h2>
+                <p class="lead">
+                    <?php echo $descripcion; ?>
+                </p>
+                <div class="button-hide oculto2">
+                    <button class="hidden-btn hidden-btn--a">Add to Car</button>
+                        <button class="hidden-btn hidden-btn--b" >Buy Now</button>
                     </div>
-                    <div class="title-card">
-                        <a href="#">
-                            <h3>Automotive Washing Products</h3>
-                        </a>
-
-                    </div>
-                    <div class="description-card">
-
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, porro.
-                        </p>
-                        <p>$11.99</p>
-
-
-
-                    </div>
-
-                    <div class="button-hide oculto2">
-                        <button class="hidden-btn">Añadir al carro</button>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-    </section>
-    <!---Fin de Seccion para mostrar productos-->
+            </section>
+        </section>
+    </article>
+    <!--FIN Detalle de producto-->
+ 
+  
 
     <!--Footer-->
     <footer class="footer">

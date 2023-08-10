@@ -66,7 +66,7 @@ if(!$connection)
         }
         else
         {
-        echo "<h3>Tabla seleccionada:</h3>" ;
+        echo "<h3>Tabla seleccionada:</h3>" ;  
         }
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
         $instruccion_SQL = "INSERT INTO registro (nombre, email, contrasena)

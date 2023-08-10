@@ -1069,7 +1069,7 @@ body {
    * SECCION ELIAS
   \*-----------------------------------*/
 
-.padre {
+  .padresss {
     margin: 5% auto;
     display: flex;
     align-content: center;
@@ -1081,20 +1081,37 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 8px 8px 16px #a8a8a8, -8px -8px 16px #ffffff;
-    /*background:linear-gradient(125deg, #06026b, #191585);*/
+    box-shadow:  8px 8px 16px #a8a8a8,
+     -8px -8px 16px #ffffff; 
+     /*background:linear-gradient(125deg, #06026b, #191585);*/
 }
 
 #tar {
+    padding: 2% 0;
     margin: 2% auto;
-    width: 290px;
-    height: 300px;
+    width: 22%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
     background: rgba(255, 255, 255, 0.57);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+#tar h1 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    line-height: 1.6em;
+}
+
+#tar p {
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.6em;
 }
 
 #tar:hover {
@@ -1105,45 +1122,40 @@ body {
 }
 
 #tar hr {
+   align-self: center;
     width: 50%;
 }
 
 #buttom {
     text-align: center;
+   margin: 10% auto;
+   
 }
 
 #buttom a {
+    
     text-decoration: none;
-    color: blue;
+    color: white;
 }
 
-#buttom a::before,
-#buttom a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: rgb(54, 17, 205);
-    transition: width 0.3s ease;
+
+#a button {
+  width: 150px;
+  height: 35px;
+  background-color: blue;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
 }
 
-#buttom a::before {
-    transform-origin: left;
+#a button:hover {
+  transform: scale(0.95);
+  transition: 0.6s;
 }
-
-#buttom a::after {
-    transform-origin: right;
-}
-
-#buttom a:hover::before,
-#buttom a:hover::after {
-    width: 100%;
-}
-
+  
+ 
 .elemt--titulo {
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
 }
 
@@ -1151,7 +1163,6 @@ body {
     margin: 10%;
     text-align: center;
 }
-
 
 /*contenedor descriptivo de los productos */
 
@@ -1174,7 +1185,7 @@ body {
     box-shadow: inset -1px 4px 81px -36px rgba(255, 255, 255, 1);
 } */
 
-*/
+
 /* termino del contenedor descriptivo de los productos */
 
 
@@ -1428,7 +1439,7 @@ body {
     display: flex;
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 5px; 
   }
 
   .container_kitchen .container_bg1 {

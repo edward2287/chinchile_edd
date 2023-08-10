@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "nombre": "Automotive Washing Products 1",
+    "descripcion": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+    "precio": "199.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 2,
+    "nombre": "Automotive Washing Products 2",
+    "descripcion": "Automotive Washing Products",
+    "precio": "1299.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 3,
+    "nombre": "Automotive Washing Products 3",
+    "descripcion": "Automotive Washing Products",
+    "precio": "1399.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 4,
+    "nombre": "Automotive Washing Products 4",
+    "descripcion": "Automotive Washing Products",
+    "precio": "1499.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 5,
+    "nombre": "Automotive Washing Products 5",
+    "descripcion": "Automotive Washing Products 3",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 6,
+    "nombre": "Automotive Washing Products 6",
+    "descripcion": "Automotive Washing Products 3",
+    "precio": "1699.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 7,
+    "nombre": "Automotive Washing Products 7",
+    "descripcion": "Automotive Washing Products ",
+    "precio": "1799.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 8,
+    "nombre": "Automotive Washing Products 8",
+    "descripcion": "Automotive Washing Products ",
+    "precio": "1899.00",
+    "descuento": 0,
+    "categoria": "automotive",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 9,
+    "nombre": "Janitorial Washing Products 1",
+    "descripcion": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+    "precio": "12999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 10,
+    "nombre": "Janitorial Washing Products 2",
+    "descripcion": "Janitorial Washing Products 2",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 11,
+    "nombre": "Janitorial Washing Products 3",
+    "descripcion": "Janitorial Washing Products 3",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 12,
+    "nombre": "Janitorial Washing Products 4",
+    "descripcion": "Janitorial Washing Products 4",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 13,
+    "nombre": "Janitorial Washing Products 5",
+    "descripcion": "Janitorial Washing Products 5",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 14,
+    "nombre": "Janitorial Washing Products 6",
+    "descripcion": "Janitorial Washing Products 6",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 15,
+    "nombre": "Janitorial Washing Products 7",
+    "descripcion": "Janitorial Washing Products 7",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 16,
+    "nombre": "Janitorial Washing Products 8",
+    "descripcion": "Janitorial Washing Products 8",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "janitorial",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 17,
+    "nombre": "Kitchen Washing Products 1",
+    "descripcion": "Kitchen Washing Products 1",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 18,
+    "nombre": "Kitchen Washing Products 2",
+    "descripcion": "Kitchen Washing Products 2",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 19,
+    "nombre": "Kitchen Washing Products 3",
+    "descripcion": "Kitchen Washing Products 3",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 20,
+    "nombre": "Kitchen Washing Products 4",
+    "descripcion": "Kitchen Washing Products 4",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 21,
+    "nombre": "Kitchen Washing Products 5",
+    "descripcion": "Kitchen Washing Products 5",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 22,
+    "nombre": "Kitchen Washing Products 6",
+    "descripcion": "Kitchen Washing Products 6",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 23,
+    "nombre": "Kitchen Washing Products 7",
+    "descripcion": "Kitchen Washing Products 7",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 24,
+    "nombre": "Kitchen Washing Products 8",
+    "descripcion": "Kitchen Washing Products 8",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "kitchen",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 25,
+    "nombre": "Laundry Washing Products 1",
+    "descripcion": "Laundry Washing Products 1",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 26,
+    "nombre": "Laundry Washing Products 2",
+    "descripcion": "Laundry Washing Products 2",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 27,
+    "nombre": "Laundry Washing Products 3",
+    "descripcion": "Laundry Washing Products 3",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 28,
+    "nombre": "Laundry Washing Products 4",
+    "descripcion": "Laundry Washing Products 4",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 29,
+    "nombre": "Laundry Washing Products 5",
+    "descripcion": "Laundry Washing Products 5",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 30,
+    "nombre": "Laundry Washing Products 6",
+    "descripcion": "Laundry Washing Products 6",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 31,
+    "nombre": "Laundry Washing Products 7",
+    "descripcion": "Laundry Washing Products 7",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  },
+  {
+    "id": 32,
+    "nombre": "Laundry Washing Products 8",
+    "descripcion": "Laundry Washing Products 8",
+    "precio": "15999.00",
+    "descuento": 0,
+    "categoria": "laundry",
+    "activo": 1,
+    "created_by": 0
+  }
+]
