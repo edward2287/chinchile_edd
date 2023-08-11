@@ -77,7 +77,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </li>
 
                     </ul>
-                    <a href="">Shop</a>
+                    
                     <a href="../html/about_us.html">About</a>
                 </nav>
             </section>
