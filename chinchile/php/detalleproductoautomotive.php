@@ -113,7 +113,7 @@ if ( $id == "" || $token == "") {
                         </li>
 
                     </ul>
-                    <a href="">Shop</a>
+                    
                     <a href="../html/about_us.html">About</a>
                 </nav>
             </section>
