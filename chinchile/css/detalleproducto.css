@@ -483,6 +483,8 @@ body {
 
 .buesqueda__sesionEnlaceDos {
     width: 25%;
+    display: flex;
+    align-items: center;
 }
 
 .buesqueda__sesionEnlaceDos svg {
@@ -491,8 +493,19 @@ body {
     fill: white;
 }
 
-.buesqueda__sesionEnlaceDos:hover svg {
+.buesqueda__sesionEnlaceDos:hover svg { 
     color: var(--blue);
+}
+
+.span_car {
+    width: 60%;
+    
+    background-color: #007aff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+    
 }
 
 

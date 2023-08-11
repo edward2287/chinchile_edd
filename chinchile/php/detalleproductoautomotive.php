@@ -10,9 +10,9 @@ $token= isset($_GET["token"]) ? $_GET["token"] : "" ;
 if ( $id == "" || $token == "") {
     echo "Error al procesar la peticion";
     exit;
-} else {
-    $token_tmp= hash_hmac("sha1", $id, KEY_TOKEN);
-    if ($token== $token_tmp) {
+} else { 
+    $token_tmp = hash_hmac("sha1", $id, KEY_TOKEN);
+    if ($token == $token_tmp) {
         $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'automotive'  ");
         $sql->execute([$id]);
         if ($sql->fetchColumn() > 0) {
@@ -49,6 +49,8 @@ if ( $id == "" || $token == "") {
 </head>
 
 <body>
+
+
 
     <!--Cabecera de la pagina-->
     <header class="headerS">
@@ -128,7 +130,7 @@ if ( $id == "" || $token == "") {
                 </a>
                 <a class="buesqueda__sesionEnlaceDos" href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.88053 4.00003C7.35284 1.71796 9.37425 0.00268555 11.7963 0.00268555H12.2005C14.6226 0.00268555 16.644 1.71796 17.1163 4.00003L19.811 4.00003C22.1161 4.00003 23.9442 5.94322 23.8036 8.24402L23.2424 17.427C23.0167 21.1203 19.9556 24 16.2554 24L7.74447 24C4.04429 24 0.983205 21.1203 0.757505 17.427L0.196322 8.24402C0.0557157 5.94322 1.88378 4.00003 4.18887 4.00003L6.88053 4.00003ZM8.42715 4.00003L15.5697 4.00003C15.1315 2.55474 13.7889 1.50269 12.2005 1.50269H11.7963C10.2079 1.50269 8.86527 2.55474 8.42715 4.00003ZM16.2554 22C18.8984 22 21.0849 19.9431 21.2461 17.305L21.8073 8.12202C21.8776 6.97162 20.9636 6.00003 19.811 6.00003L4.18887 6.00003C3.03633 6.00003 2.12229 6.97162 2.1926 8.12202L2.75378 17.305C2.915 19.9431 5.10149 22 7.74447 22L16.2554 22ZM16.4705 8.49079C16.0563 8.49079 15.7205 8.82658 15.7205 9.24079V10.0414C15.7205 12.097 14.054 13.7635 11.9984 13.7635C9.94271 13.7635 8.27626 12.097 8.27626 10.0414V9.24079C8.27626 8.82658 7.94048 8.49079 7.52626 8.49079C7.11205 8.49079 6.77626 8.82658 6.77626 9.24079V10.0414C6.77626 12.9254 9.11428 15.2635 11.9984 15.2635C14.8825 15.2635 17.2205 12.9254 17.2205 10.0414V9.24079C17.2205 8.82658 16.8847 8.49079 16.4705 8.49079Z" fill="currentColor"></path>
-                    </svg></a>
+                    </svg><span id="num_cart" class="span_car"><?php echo $num_cart;?></span></a>
             </section>
         </article>
 
@@ -154,9 +156,9 @@ if ( $id == "" || $token == "") {
                     <?php echo $descripcion; ?>
                 </p>
                 <div class="button-hide oculto2">
-                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id; ?>, '<?php echo $token_tmp ?>')">Add to Car</button>
-                        <button class="hidden-btn hidden-btn--b" >Buy Now</button>
-                    </div>
+                    <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id;?>, '<?php echo $token_tmp;?>')">Add to Car</button>
+                    <button class="hidden-btn hidden-btn--b" >Buy Now</button>
+                </div>
             </section>
         </section>
     </article>
@@ -217,20 +219,30 @@ if ( $id == "" || $token == "") {
     <!--Termino Footer-->
 
     <script>
-        function addProducto(id, token) {
-            let url = 'clases/carrito.php'
-            let formdData = new formdData ()
-            formdData.append('id', id)
-            formdData.append('token', token)
+       
+        function addProducto(id, token){ 
+        
+            let url = '../clases/carrito.php'
+            let formData = new FormData()
+            formData.append('id', id)
+            formData.append('token', token)
 
             fetch(url,{
                 method: 'POST', 
-                body: formdData,
-                mode: 'cors'
+                body: formData,
+                mode: 'cors',
             }).then(response => response.json())
+            .then(data =>{
+                if(data.ok) {
+                    let elemento = document.getElementById("num_cart")
+                    elemento.innerHTML = data.numero
+                }
+            })
         }
     </script>
 
 </body>
+
+
 
 </html>
