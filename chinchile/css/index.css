@@ -1980,10 +1980,19 @@ body {
 
 
 /*-----------------------------------*\
-   * #REUSED STYLE
+   * RESPONSIVE
   \*-----------------------------------*/
 
 
-/*-----------------------------------*\
-   * #footer
-  \*-----------------------------------*/
+  @media (max-width: 990px) {
+    .footer_principal {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 928px) {
+    .footer_principal {
+        font-size: 14px;
+    }
+}
+
