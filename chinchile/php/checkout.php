@@ -31,6 +31,8 @@ if($productos != null) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/carritocompras.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 
@@ -49,13 +51,13 @@ if($productos != null) {
             </section>
             <section class="busqueda__contenedor">
                 <nav class="menuNavegacion">
-                    <a href="../html/index.html">Home</a>
+                    <a id="home" href="../html/index.html">Home</a>
                     <ul class="menuNavegacion__enlaceFlexLista">
                         <li class="contenedor__menuNavegacion">
-                            <a class="menuNavegacion__enlaceFlexss" href="../html/products.html">
-                                <section class="menuNavegacion__enlaceFlexListaElemento">
-                                    <p>Products</p>
-                                    <svg aria-hidden="true" focusable="false" role="presentation" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-chevron-down">
+                            <a id="products" class="menuNavegacion__enlaceFlexss" href="../html/products.html">
+                                <section  class="menuNavegacion__enlaceFlexListaElemento">
+                                    <p  class="productSS">Products</p>
+                                    <svg class="svgSS" aria-hidden="true" focusable="false" role="presentation" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-chevron-down">
                                         <path class="icon-chevron-down-left" d="M4 4.5L7 1.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="square"></path>
                                         <path class="icon-chevron-down-right" d="M4 4.5L1 1.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="square"></path>
                                     </svg>
@@ -98,12 +100,12 @@ if($productos != null) {
 
                     </ul>
                    
-                    <a href="../html/about_us.html">About</a>
+                    <a id="about" href="../html/about_us.html">About</a>
                 </nav>
             </section>
 
             <section class="buesqueda__sesion">
-                <a class="buesqueda__sesionEnlaceUno" href="../html/login.html">
+                <a id="login"  class="buesqueda__sesionEnlaceUno" href="../html/login.html">
                     <svg class="icon-account " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="none">
                         <path d="M11.3336 14.4447C14.7538 14.4447 17.5264 11.6417 17.5264 8.18392C17.5264 4.72616 14.7538 1.9231 11.3336 1.9231C7.91347 1.9231 5.14087 4.72616 5.14087 8.18392C5.14087 11.6417 7.91347 14.4447 11.3336 14.4447Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         </path>
@@ -163,7 +165,7 @@ if($productos != null) {
                                     <?php echo MONEDA . number_format($subtotal, 2, ".", ","); ?>
                                 </div>
                             </td>
-                            <td id="eliminalos"><a href="#" id="eliminar" data-bs="<?php echo $_id; ?>">Eliminar</a></td>
+                            <td ><a  id="eliminar" class="btn btn-warning btn-sm" data-bs-id="<?php echo $_id; ?>" data-bs-toggle="modal" data-bs-target="#eliminaModal">Delete</a></td>
                         </tr>
                         <?php } ?>
 
@@ -244,16 +246,63 @@ if($productos != null) {
     
 
     <!--Termino Footer-->
+
+
+
+
+
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="eliminaModal" tabindex="-1" aria-labelledby="eliminaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eliminaModalLabel">Alert</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿Do you want to romove this product from the list?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="btn-elimina" type="button" class="btn btn-danger" onclick="eliminar()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Termino  Modal -->
+
+
+
+
+
+
+
+    <!--BOOSTRAP-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+    <!--Script-->
     <script>
+       let eliminaModal = document.getElementById('eliminaModal')
+       eliminaModal.addEventListener('show.bs.modal', function(event){
+        let button = event.relatedTarget
+        let id = button.getAttribute('data-bs-id')
+        let buttonElimina = eliminaModal.querySelector('.modal-footer #btn-elimina')
+        buttonElimina.value = id
+       })  
        
-        let eliminaModal = document.getElementById('eliminalos')
-        eliminaModal.addEventListener('click', function(event){
-            let button = event.relatedTarget
-            let id = button.getAttribute('data-bs')
-            let buttonElimina = eliminar.querySelector('#eliminar')
-            buttonElimina.value = id
-        })
- 
+
         function actualizaCantidad(cantidad, id){ 
         
             let url = '../clases/actualizar_carrito.php'
@@ -292,14 +341,14 @@ if($productos != null) {
 
         function eliminar(){ 
 
-         let botonElimina = document.getElementById('eliminar') 
-         let id = botonElimina.value
+            let botonElimina = document.getElementById('btn-elimina')
+            let id = botonElimina.value
         
         let url = '../clases/actualizar_carrito.php'
         let formData = new FormData()
-        formData.append('action', 'agregar')
+        formData.append('action', 'eliminar')
         formData.append('id', id)
-        formData.append('cantidad', cantidad)
+
 
         fetch(url,{
             method: 'POST', 
@@ -308,12 +357,13 @@ if($productos != null) {
         }).then(response => response.json())
         .then(data =>{
             if(data.ok) {
-
-                
+                location.reload()
                
             }
         })
     }
+
+        
     </script>
 </body>
 

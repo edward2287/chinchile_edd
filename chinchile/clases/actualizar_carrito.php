@@ -5,7 +5,7 @@ require '../php/dtbproducto.php';
 if (isset($_POST ['action'])) {
 
     $action = $_POST['action'];
-    $id = isset($_POST['id']) ? $_POST['id'] : 0;
+    $id = isset($_POST['id']) ? $_POST['id'] : 0; 
 
     if ($action == 'agregar') {
         $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : 0;
@@ -16,6 +16,8 @@ if (isset($_POST ['action'])) {
             $datos['ok'] = false;
         }
         $datos['sub'] = MONEDA . number_format($respuesta, 2, ".", ",");
+    } else if ($action == 'eliminar') {
+        $datos['ok']= eliminar($id);
     } else {
         $datos['ok'] = false;
     }
@@ -47,6 +49,17 @@ function agregar($id, $cantidad) {
         }
     } else {
         return $res;
+    }
+}
+
+function eliminar ($id) {
+    if ($id > 0) {
+        if(isset($_SESSION ['carrito']['productos'][$id])) {
+            unset($_SESSION ['carrito']['productos'][$id]);
+            return true;
+        }
+    } else {
+        return false;
     }
 }
 ?>

@@ -378,6 +378,13 @@ body {
     color: var(--white);
 }
 
+#home,
+#products,
+#about,
+#login {
+    text-decoration: none;
+}
+
 .busqueda__contenedorInput {
     border: .2px solid rgba(128, 128, 128, 0.388);
     height: 80%;
@@ -479,6 +486,7 @@ body {
     color: white;
     font-size: 1em;
     font-weight: 600;
+    padding-top: 17px;
 }
 
 .buesqueda__sesionEnlaceDos {
@@ -493,19 +501,16 @@ body {
     fill: white;
 }
 
-.buesqueda__sesionEnlaceDos:hover svg { 
+.buesqueda__sesionEnlaceDos:hover svg {
     color: var(--blue);
 }
 
 .span_car {
     width: 60%;
-    
     background-color: #007aff;
     color: white;
     display: flex;
     justify-content: center;
-    
-    
 }
 
 
@@ -531,12 +536,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 7rem;
-    height: 4em;
+    height: 8em;
     gap: 3%;
+    padding-top: 30px;
+}
+
+.svgSS {
+    margin-bottom: 10px;
 }
 
 .menuNavegacion a {
-    color: var(--black);
+    color: var(--white);
     font-size: 1em;
     font-weight: 600;
 }
@@ -553,7 +563,7 @@ body {
     position: absolute;
     z-index: 100;
     margin-left: -9%;
-    margin-top: 2%;
+    margin-top: 4.5%;
     display: flex;
     flex-direction: column;
     display: none;
@@ -606,54 +616,45 @@ body {
 /*-----------------------------------*\
    * SECCION Santos
   \*-----------------------------------*/
+
 .carritoCompras {
     box-sizing: border-box;
     width: 100%;
     display: flex;
     padding: 3% 0 1% 0;
-    
 }
 
-.carritoCompras_tablas{
+.carritoCompras_tablas {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-
-.carritoCompras_tablas table{
+.carritoCompras_tablas table {
     width: 70%;
 }
 
-
-
-
-.carritoCompras_tablas .trHead{
+.carritoCompras_tablas .trHead {
     border-radius: 22px;
     background: #ffffff;
-    box-shadow:  5px -5px 34px #e6e6e6,
-                 -5px 5px 34px #ffffff;
-    
+    box-shadow: 5px -5px 34px #e6e6e6, -5px 5px 34px #ffffff;
 }
 
-.carritoCompras_tablas th{
+.carritoCompras_tablas th {
     padding: 1% 0;
-
-    text-align: center;       
+    text-align: center;
 }
 
-#productoss  {
+#productoss {
     text-align: left;
     padding-left: 1%;
 }
 
 .trBody td {
-   text-align: center;
-   padding: 2% 0;
-   border-bottom: .5px solid rgba(93, 92, 92, 0.356);
+    text-align: center;
+    padding: 2% 0;
+    border-bottom: .5px solid rgba(93, 92, 92, 0.356);
 }
-
-
 
 #tproductoss {
     letter-spacing: 1px;
@@ -671,22 +672,14 @@ body {
     opacity: 1;
 }
 
-#eliminar {
-    background-color: rgb(255, 166, 0);
-    padding: 3% 4%;
-    color: var(--black);
-}
-
 .total_carritoCompra {
     text-align: center;
     padding: 3% 0 .5% 0;
-  
 }
 
 .total_carritoCompra h3 {
     font-size: 1.7em;
     text-align: center;
- 
 }
 
 .forBuy {
@@ -707,13 +700,12 @@ body {
     font-size: 1.5em;
     font-weight: 500;
     letter-spacing: 1px;
- 
 }
 
 .forBuy button:hover {
     background-color: var(--blue-hover);
- 
 }
+
 
 /*-----------------------------------*\
    * #FOOTER
@@ -847,5 +839,5 @@ body {
     font-weight: 300;
 }
 
-/* MODAL*/
 
+/* MODAL*/
