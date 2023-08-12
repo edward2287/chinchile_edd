@@ -4,34 +4,20 @@ require 'dtbproducto.php';
 $db = new  Database();
 $con = $db->conectar();
 
-$id = isset($_GET["id"]) ? $_GET["id"] : ""; 
-$token= isset($_GET["token"]) ? $_GET["token"] : "" ;
+$productos = isset($_SESSION['carrito']['productos']) ? $_SESSION['carrito']['productos'] : null;
+/*session_destroy();*/
+/*print_r($_SESSION);*/
 
-if ( $id == "" || $token == "") {
-    echo "Error al procesar la peticion";
-    exit;
-} else {
-    $token_tmp= hash_hmac("sha1", $id, KEY_TOKEN);
-    if ($token== $token_tmp) {
-        $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1 AND categoria = 'laundry'  ");
-        $sql->execute([$id]);
-        if ($sql->fetchColumn() > 0) {
-            $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento FROM productos WHERE id=? AND activo=1 AND categoria = 'laundry'  ");
-            $sql->execute([$id]);
-            $row = $sql->fetch(PDO::FETCH_ASSOC);
-            $nombre = $row ["nombre"];
-            $descripcion = $row ["descripcion"];
-            $precio = $row ["precio"];
-            $descuento = $row ["descuento"];
-            $precio_decuento = $precio - (($precio * $descuento) / 100);
-            
-        }
-      
-    } else {
-        echo "Error al procesar la peticion";
-        exit;
+$lista_carrito = array();
+
+if($productos != null) {
+    foreach($productos as $clave=> $cantidad) {
+        $sql = $con->prepare("SELECT id, nombre, precio, descuento, $cantidad AS cantidad FROM productos WHERE id=? AND activo=1  ");
+        $sql->execute([$clave]);
+        $lista_carrito[] = $sql->fetch(PDO::FETCH_ASSOC);
     }
-};
+}
+
 
 
 ?>
@@ -44,7 +30,7 @@ if ( $id == "" || $token == "") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/detalleproducto.css">
+    <link rel="stylesheet" href="../css/carritocompras.css">
     <title>Document</title>
 </head>
 
@@ -126,7 +112,7 @@ if ( $id == "" || $token == "") {
                     </svg>
                     <p class="login">Login</p>
                 </a>
-                <a class="buesqueda__sesionEnlaceDos" href="checkout.php"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <a class="buesqueda__sesionEnlaceDos" href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.88053 4.00003C7.35284 1.71796 9.37425 0.00268555 11.7963 0.00268555H12.2005C14.6226 0.00268555 16.644 1.71796 17.1163 4.00003L19.811 4.00003C22.1161 4.00003 23.9442 5.94322 23.8036 8.24402L23.2424 17.427C23.0167 21.1203 19.9556 24 16.2554 24L7.74447 24C4.04429 24 0.983205 21.1203 0.757505 17.427L0.196322 8.24402C0.0557157 5.94322 1.88378 4.00003 4.18887 4.00003L6.88053 4.00003ZM8.42715 4.00003L15.5697 4.00003C15.1315 2.55474 13.7889 1.50269 12.2005 1.50269H11.7963C10.2079 1.50269 8.86527 2.55474 8.42715 4.00003ZM16.2554 22C18.8984 22 21.0849 19.9431 21.2461 17.305L21.8073 8.12202C21.8776 6.97162 20.9636 6.00003 19.811 6.00003L4.18887 6.00003C3.03633 6.00003 2.12229 6.97162 2.1926 8.12202L2.75378 17.305C2.915 19.9431 5.10149 22 7.74447 22L16.2554 22ZM16.4705 8.49079C16.0563 8.49079 15.7205 8.82658 15.7205 9.24079V10.0414C15.7205 12.097 14.054 13.7635 11.9984 13.7635C9.94271 13.7635 8.27626 12.097 8.27626 10.0414V9.24079C8.27626 8.82658 7.94048 8.49079 7.52626 8.49079C7.11205 8.49079 6.77626 8.82658 6.77626 9.24079V10.0414C6.77626 12.9254 9.11428 15.2635 11.9984 15.2635C14.8825 15.2635 17.2205 12.9254 17.2205 10.0414V9.24079C17.2205 8.82658 16.8847 8.49079 16.4705 8.49079Z" fill="currentColor"></path>
                     </svg><span id="num_cart" class="span_car"><?php echo $num_cart;?></span></a>
             </section>
@@ -135,34 +121,74 @@ if ( $id == "" || $token == "") {
     </header>
     <!---Fin de Barra de busqueda-->
 
-    <!--Detalle de producto-->
-    <article class="containeres">
-        <section class="row">
-            <section class= "row_img">
-            <?php                       
-                        $img = "../images/productos/" . $id . "/principal.png";
-                        if (!file_exists($img))
-                        $img = "../images/no-img.png"
+
+
+    <!---Seccion para mostrar productos en el carrito-->
+   
+        <div class="carritoCompras">
+            <section class="carritoCompras_tablas">
+                <table>
+                    <thead>
+                        <tr class="trHead">
+                            <th id="productoss">Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if($lista_carrito== null) {
+                            echo "<tr><td><b>Lista vacia</b></td><td><b>Lista vacia</b></td><td><b>Lista vacia</b></td><td><b>Lista vacia</b></td><td><b>Lista vacia</b></td></tr>";
+                            } else {
+                            $total = 0;
+                            foreach($lista_carrito as $producto) { 
+                            $_id = $producto ["id"];
+                            $nombre = $producto ["nombre"];
+                            $precio = $producto ["precio"];
+                            $descuento = $producto ["descuento"];
+                            $cantidad = $producto ["cantidad"];
+                            $precio_desc = $precio - (($precio * $descuento) / 100);
+                            $subtotal = $cantidad * $precio_desc;
+                            $total += $subtotal;
                         ?>
-                        <a href=""><img src="<?php echo $img; ?>"></a>
-               
+                        <tr class="trBody">
+                            <td id="tproductoss"><?php echo $nombre; ?></td>
+                            <td><?php echo MONEDA . number_format($precio_desc, 2, ".", ","); ?></td>
+                            <td>
+                                <input class="increment" type="number" min="1" max="15" step="1" value="<?php echo $cantidad?>" size="5" id="cantidad <?php $_id;?>" onchange="actualizaCantidad(this.value, <?php echo $_id;  ?>)">
+                            </td>
+                            <td>
+                                <div id="subtotal_<?php echo $_id; ?>" name= "subtotal[]">
+                                    <?php echo MONEDA . number_format($subtotal, 2, ".", ","); ?>
+                                </div>
+                            </td>
+                            <td id="eliminalos"><a href="#" id="eliminar" data-bs="<?php echo $_id; ?>">Eliminar</a></td>
+                        </tr>
+                        <?php } ?>
+
+                          <tr >
+                            
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="total_carritoCompra">
+                                <h3 id="total"><?php echo MONEDA . number_format($total, 2, ".", ",");?></h3>
+                            </td>
+                          </tr>      
+
+                    </tbody>
+                    <?php } ?>
+                </table>
             </section>
-            <section class= "row_txt">
-                <h1><?php echo $nombre; ?></h1>
-                <h2><?php echo MONEDA . number_format($precio, 2, ".", ",")  ; ?></h2>
-                <p class="lead">
-                    <?php echo $descripcion; ?>
-                </p>
-                <div class="button-hide oculto2">
-                <button class="hidden-btn hidden-btn--a" onclick="addProducto(<?php echo $id;?>, '<?php echo $token_tmp;?>')">Add to Car</button>
-                        <button class="hidden-btn hidden-btn--b" >Buy Now</button>
-                    </div>
-            </section>
-        </section>
-    </article>
-    <!--FIN Detalle de producto-->
- 
-  
+
+        </div>
+
+        <article class="forBuy">
+            <button>PAY</button>
+        </article>
+
+    <!---Fin de Seccion para mostrar productos en el carrito-->
 
     <!--Footer-->
     <footer class="footer">
@@ -214,29 +240,81 @@ if ( $id == "" || $token == "") {
 
 
     </footer>
+
+    
+
     <!--Termino Footer-->
     <script>
        
-       function addProducto(id, token){ 
-       
-           let url = '../clases/carrito.php'
-           let formData = new FormData()
-           formData.append('id', id)
-           formData.append('token', token)
+        let eliminaModal = document.getElementById('eliminalos')
+        eliminaModal.addEventListener('click', function(event){
+            let button = event.relatedTarget
+            let id = button.getAttribute('data-bs')
+            let buttonElimina = eliminar.querySelector('#eliminar')
+            buttonElimina.value = id
+        })
+ 
+        function actualizaCantidad(cantidad, id){ 
+        
+            let url = '../clases/actualizar_carrito.php'
+            let formData = new FormData()
+            formData.append('action', 'agregar')
+            formData.append('id', id)
+            formData.append('cantidad', cantidad)
 
-           fetch(url,{
-               method: 'POST', 
-               body: formData,
-               mode: 'cors',
-           }).then(response => response.json())
-           .then(data =>{
-               if(data.ok) {
-                   let elemento = document.getElementById("num_cart")
-                   elemento.innerHTML = data.numero
-               }
-           })
-       }
-   </script>
+            fetch(url,{
+                method: 'POST', 
+                body: formData,
+                mode: 'cors',
+            }).then(response => response.json())
+            .then(data =>{
+                if(data.ok) {
+
+                    let divsubtotal = document.getElementById('subtotal_' + id)
+                    divsubtotal.innerHTML = data.sub
+
+                    let total = 0.00
+                    let list = document.getElementsByName('subtotal[]')
+
+                    for(let i = 0; i < list.length; i++) {
+                        total += parseFloat(list[i].innerHTML.replace(/[$,]/g, ''))
+                    }
+
+                    total = new Intl.NumberFormat('en-US', {
+                        minimunFractionDigits: 2
+                    }).format(total)
+                    document.getElementById('total').innerHTML = '<?php echo MONEDA; ?>' + total
+
+                   
+                }
+            })
+        }
+
+        function eliminar(){ 
+
+         let botonElimina = document.getElementById('eliminar') 
+         let id = botonElimina.value
+        
+        let url = '../clases/actualizar_carrito.php'
+        let formData = new FormData()
+        formData.append('action', 'agregar')
+        formData.append('id', id)
+        formData.append('cantidad', cantidad)
+
+        fetch(url,{
+            method: 'POST', 
+            body: formData,
+            mode: 'cors',
+        }).then(response => response.json())
+        .then(data =>{
+            if(data.ok) {
+
+                
+               
+            }
+        })
+    }
+    </script>
 </body>
 
 </html>

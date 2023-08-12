@@ -191,7 +191,6 @@ body {
     align-items: center;
     gap: 25px;
     padding: 2% 0 0 0;
-    
 }
 
 .container_title .title-box {
@@ -324,8 +323,6 @@ body {
     box-sizing: border-box;
     width: 100%;
     background-color: var(--black);
-    position: fixed;
-    z-index: 100;
 }
 
 .busquedaS {
@@ -603,175 +600,120 @@ body {
 }
 
 
-/*tarjeta de la descripcion de los productos */
+/*CARRITO DE COMPRAS */
 
 
 /*-----------------------------------*\
-   * SECCION SANTOS
+   * SECCION Santos
   \*-----------------------------------*/
-
-
-/*-----------------------------------*\
-   * #tarjetas
-  \*-----------------------------------*/
-/* navegador */
-
-
-
-.container_title_Nav {
+.carritoCompras {
     box-sizing: border-box;
-    width: 35%;
-    margin-top: 3%;
-    padding: 1% 0;
-    display: flex;
-    justify-content: space-evenly;
-    background: rgba( 22, 22, 22, 0.75 );
-    backdrop-filter: blur( 19.5px );
-    -webkit-backdrop-filter: blur( 19.5px );
-    border-radius: 5px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-.container_title_Nav a {
-    font-family: var(--ff-russo);
-    color: var(--white);
-
-  
-}
-
-#enlaceActivo {
-    color: #007aff;
-}
-
-
-
-/* imagen*/
-
-.containerProducts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container-cards {
-    box-sizing: border-box;
-    background-image: url(../recursos2/Restaurant-Cleaners-blue.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 4% 5%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    justify-content: center;
-    gap: 35px;
-    row-gap: 45px;
-    margin: 50px 0;
-}
-
-.card-tarjetas {
-    height: 100%;
-    width: 100%;
-    padding: 5% 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 5%;
-    border-radius: 7px;
-    background: rgba(255, 255, 255, 0.52);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur(7px );
-    -webkit-backdrop-filter: blur( 18px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    cursor: pointer;
-}
-
-.card-tarjetas .oculto {
-    background-color: transparent;
-    color: transparent;
-    transition: var(--transition2);
-}
-
-.card-tarjetas .oculto:hover {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-.card-tarjetas .img-product {
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.card-tarjetas .img-product a img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    mix-blend-mode:multiply;
-    transition: var(--transition2);
-}
-
-.card-tarjetas:hover .img-product img {
-    transform: scale(1.05);
-}
-
-
-/* titulo*/
-
-.card-tarjetas .title-card {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: var(--font-size-body-large);
-}
-
-.card-tarjetas .title-card a {
-    color: black;
-    transition: var(--transition2);
-}
-
-.card-tarjetas:hover .title-card a {
-    color: orangered;
-}
-
-
-/* sub titulo*/
-
-.description-card {
     width: 100%;
     display: flex;
-   
-    justify-content: end;
-    align-items: center;
-    padding-right: 12%;
+    padding: 3% 0 1% 0;
     
 }
 
- .pricess {
-    font-size: 1.2em;
-    color: #007b21;
-   /* color: var(--blue);*/
-    padding: 0 5px 10px 5px;
-}
-
-
-
-/* boton*/
-
-.card-tarjetas .button-hide {
+.carritoCompras_tablas{
+    width: 100%;
     display: flex;
-    gap: 25px;
-   
-} 
-
-.hidden-btn--a {
-    background-color: orangered;
+    justify-content: center;
 }
 
-.hidden-btn--a:hover {
-    background-color: rgb(212, 32, 0);
+
+.carritoCompras_tablas table{
+    width: 70%;
 }
 
+
+
+
+.carritoCompras_tablas .trHead{
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow:  5px -5px 34px #e6e6e6,
+                 -5px 5px 34px #ffffff;
+    
+}
+
+.carritoCompras_tablas th{
+    padding: 1% 0;
+
+    text-align: center;       
+}
+
+#productoss  {
+    text-align: left;
+    padding-left: 1%;
+}
+
+.trBody td {
+   text-align: center;
+   padding: 2% 0;
+   border-bottom: .5px solid rgba(93, 92, 92, 0.356);
+}
+
+
+
+#tproductoss {
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 1%;
+}
+
+.increment {
+    width: 50%;
+    border: 1px solid black;
+}
+
+.increment::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+#eliminar {
+    background-color: rgb(255, 166, 0);
+    padding: 3% 4%;
+    color: var(--black);
+}
+
+.total_carritoCompra {
+    text-align: center;
+    padding: 3% 0 .5% 0;
+  
+}
+
+.total_carritoCompra h3 {
+    font-size: 1.7em;
+    text-align: center;
+ 
+}
+
+.forBuy {
+    box-sizing: border-box;
+    width: 80%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    display: flex;
+    justify-content: end;
+}
+
+.forBuy button {
+    background-color: var(--blue);
+    color: white;
+    width: 15%;
+    padding: 1.5%;
+    border-radius: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 1px;
+ 
+}
+
+.forBuy button:hover {
+    background-color: var(--blue-hover);
+ 
+}
 
 /*-----------------------------------*\
    * #FOOTER
@@ -904,3 +846,6 @@ body {
     font-size: .9em;
     font-weight: 300;
 }
+
+/* MODAL*/
+
